@@ -1,7 +1,7 @@
 {
   "securities_trader_id": "9661",
   "securities_trader": "富邦-新店",
-  "generated_at": "2026-04-30T14:29:33Z",
+  "generated_at": "2026-04-30T16:11:12Z",
   "date_range": {
     "start": "2021-07-01",
     "end": "2026-04-30",
@@ -9,11 +9,11 @@
     "max_observed_date": "2026-04-30"
   },
   "raw": {
-    "path": "data/branches/9661_富邦新店/raw/trading_daily_detail.parquet",
-    "row_count": 4882449
+    "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9661_富邦新店/raw/trading_daily_detail.parquet",
+    "row_count": 0
   },
   "derived": {
-    "path": "data/branches/9661_富邦新店/derived/stock_daily_agg.parquet",
+    "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9661_富邦新店/derived/stock_daily_agg.parquet",
     "row_count": 1085126,
     "min_date": "2021-07-01",
     "max_date": "2026-04-30",
