@@ -27,7 +27,7 @@ Open `dashboard/one_shot/index.html` after the build finishes.
 
 ## GitHub Pages
 
-`.github/workflows/update-one-shot-dashboard.yml` refreshes data every day at 21:07 Asia/Taipei, rebuilds `dashboard/one_shot`, commits refreshed data, and deploys the static dashboard with GitHub Pages.
+`.github/workflows/update-one-shot-dashboard.yml` refreshes data every day at 21:07 Asia/Taipei, rebuilds `dashboard/one_shot`, commits refreshed data, and deploys the static dashboard with GitHub Pages. It also runs on pushes to `main` so a new deployment starts immediately after repository changes.
 
 Required repository secret:
 
