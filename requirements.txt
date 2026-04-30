@@ -1,0 +1,6 @@
+pandas>=2.2,<3
+pyarrow>=15,<22
+tej-tool-api>=1.2,<2
+tejapi>=0.1.31,<0.2
+dask[dataframe]>=2024.8,<2025
+openpyxl>=3.1,<4

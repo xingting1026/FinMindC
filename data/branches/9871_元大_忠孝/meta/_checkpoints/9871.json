@@ -1,0 +1,13 @@
+{
+  "securities_trader_id": "9871",
+  "securities_trader": "元大-忠孝",
+  "start_date": "2021-07-01",
+  "end_date": "2026-04-30",
+  "next_date": null,
+  "last_completed_date": "2026-04-30",
+  "last_attempted_date": "2026-04-30",
+  "completed_trading_days": 1173,
+  "rows_written": 3366364,
+  "status": "complete",
+  "updated_at": "2026-04-30T14:31:41Z"
+}

@@ -1,0 +1,35 @@
+{
+  "securities_trader_id": "983N",
+  "securities_trader": "元大-大安",
+  "generated_at": "2026-04-30T14:31:05Z",
+  "date_range": {
+    "start": "2021-07-01",
+    "end": "2026-04-30",
+    "min_observed_date": "2021-07-01",
+    "max_observed_date": "2026-04-30"
+  },
+  "raw": {
+    "path": "data/branches/983N_元大_大安/raw/trading_daily_detail.parquet",
+    "row_count": 1551024
+  },
+  "derived": {
+    "path": "data/branches/983N_元大_大安/derived/stock_daily_agg.parquet",
+    "row_count": 502605,
+    "min_date": "2021-07-01",
+    "max_date": "2026-04-30",
+    "distinct_stock_count": 2592
+  },
+  "checkpoint": {
+    "securities_trader_id": "983N",
+    "securities_trader": "元大-大安",
+    "start_date": "2021-07-01",
+    "end_date": "2026-04-30",
+    "next_date": null,
+    "last_completed_date": "2026-04-30",
+    "last_attempted_date": "2026-04-30",
+    "completed_trading_days": 1173,
+    "rows_written": 1558713,
+    "status": "complete",
+    "updated_at": "2026-04-30T14:31:04Z"
+  }
+}

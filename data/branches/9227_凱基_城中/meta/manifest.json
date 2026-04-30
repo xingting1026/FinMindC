@@ -1,0 +1,35 @@
+{
+  "securities_trader_id": "9227",
+  "securities_trader": "凱基-城中",
+  "generated_at": "2026-04-30T14:21:17Z",
+  "date_range": {
+    "start": "2021-07-01",
+    "end": "2026-04-30",
+    "min_observed_date": "2021-07-01",
+    "max_observed_date": "2026-04-30"
+  },
+  "raw": {
+    "path": "data/branches/9227_凱基_城中/raw/trading_daily_detail.parquet",
+    "row_count": 2882896
+  },
+  "derived": {
+    "path": "data/branches/9227_凱基_城中/derived/stock_daily_agg.parquet",
+    "row_count": 767936,
+    "min_date": "2021-07-01",
+    "max_date": "2026-04-30",
+    "distinct_stock_count": 2694
+  },
+  "checkpoint": {
+    "securities_trader_id": "9227",
+    "securities_trader": "凱基-城中",
+    "start_date": "2021-07-01",
+    "end_date": "2026-04-30",
+    "next_date": null,
+    "last_completed_date": "2026-04-30",
+    "last_attempted_date": "2026-04-27",
+    "completed_trading_days": 1173,
+    "rows_written": 2896687,
+    "status": "complete",
+    "updated_at": "2026-04-30T14:21:16Z"
+  }
+}

@@ -1,0 +1,68 @@
+name: Update one-shot dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 13 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: one-shot-dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Update market OHLCV matrices
+        env:
+          FINMIND_API_TOKEN: ${{ secrets.FINMIND_API_TOKEN }}
+        run: python scripts/update_market_ohlcv_matrices.py
+
+      - name: Update branch daily aggregates
+        env:
+          FINMIND_API_TOKEN: ${{ secrets.FINMIND_API_TOKEN }}
+        run: python scripts/update_branch_agg_direct.py --exclude-branch-id 9268
+
+      - name: Build dashboard data
+        run: python scripts/build_one_shot_dashboard.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Close.parquet High.parquet Low.parquet Open.parquet Volume.parquet
+          git add data/branches data/one_shot dashboard/one_shot
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Update one-shot dashboard data"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/one_shot
+
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,13 @@
+{
+  "securities_trader_id": "9813",
+  "securities_trader": "元大-中崙",
+  "start_date": "2021-07-01",
+  "end_date": "2026-04-30",
+  "next_date": null,
+  "last_completed_date": "2026-04-30",
+  "last_attempted_date": "2026-04-28",
+  "completed_trading_days": 1173,
+  "rows_written": 2132427,
+  "status": "complete",
+  "updated_at": "2026-04-30T14:30:15Z"
+}

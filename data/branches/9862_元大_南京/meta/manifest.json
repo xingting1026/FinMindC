@@ -1,0 +1,35 @@
+{
+  "securities_trader_id": "9862",
+  "securities_trader": "元大-南京",
+  "generated_at": "2026-04-30T14:31:24Z",
+  "date_range": {
+    "start": "2021-07-01",
+    "end": "2026-04-30",
+    "min_observed_date": "2021-07-01",
+    "max_observed_date": "2026-04-30"
+  },
+  "raw": {
+    "path": "data/branches/9862_元大_南京/raw/trading_daily_detail.parquet",
+    "row_count": 3083726
+  },
+  "derived": {
+    "path": "data/branches/9862_元大_南京/derived/stock_daily_agg.parquet",
+    "row_count": 810196,
+    "min_date": "2021-07-01",
+    "max_date": "2026-04-30",
+    "distinct_stock_count": 2720
+  },
+  "checkpoint": {
+    "securities_trader_id": "9862",
+    "securities_trader": "元大-南京",
+    "start_date": "2021-07-01",
+    "end_date": "2026-04-30",
+    "next_date": null,
+    "last_completed_date": "2026-04-30",
+    "last_attempted_date": "2026-04-30",
+    "completed_trading_days": 1173,
+    "rows_written": 3107858,
+    "status": "complete",
+    "updated_at": "2026-04-30T14:31:23Z"
+  }
+}

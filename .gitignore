@@ -1,0 +1,14 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+
+LOCAL_API_KEYS.md
+logs/
+reports/
+mini_projects/
+finmind_chip_fetch_log.hackmd.md
+
+data/branches/*/raw/
+data/taiwan_stock_trading_daily_report/
+data/test_batch/
