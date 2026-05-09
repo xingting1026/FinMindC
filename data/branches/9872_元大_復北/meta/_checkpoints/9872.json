@@ -2,12 +2,12 @@
   "securities_trader_id": "9872",
   "securities_trader": "元大-復北",
   "start_date": "2021-07-01",
-  "end_date": "2026-04-30",
+  "end_date": "2026-05-09",
   "next_date": null,
-  "last_completed_date": "2026-04-30",
-  "last_attempted_date": "2026-04-30",
-  "completed_trading_days": 1173,
-  "rows_written": 3002799,
+  "last_completed_date": "2026-05-08",
+  "last_attempted_date": "2026-05-08",
+  "completed_trading_days": 1178,
+  "rows_written": 3029903,
   "status": "complete",
-  "updated_at": "2026-04-30T14:31:56Z"
+  "updated_at": "2026-05-09T14:21:17Z"
 }
