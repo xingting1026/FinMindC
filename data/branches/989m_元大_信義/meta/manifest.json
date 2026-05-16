@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "989m",
   "securities_trader": "元大-信義",
-  "generated_at": "2026-05-15T15:26:41Z",
+  "generated_at": "2026-05-16T14:25:31Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-15",
+    "end": "2026-05-16",
     "min_observed_date": "2021-07-01",
     "max_observed_date": "2026-05-15"
   },
@@ -23,13 +23,13 @@
     "securities_trader_id": "989m",
     "securities_trader": "元大-信義",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-15",
-    "next_date": null,
+    "end_date": "2026-05-16",
+    "next_date": "2026-05-15",
     "last_completed_date": "2026-05-15",
     "last_attempted_date": "2026-05-12",
     "completed_trading_days": 1183,
     "rows_written": 1978692,
-    "status": "complete",
+    "status": "pending",
     "updated_at": "2026-05-15T15:26:41Z"
   }
 }
