@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "989P",
   "securities_trader": "元大-敦南",
-  "generated_at": "2026-05-17T14:39:13Z",
+  "generated_at": "2026-05-18T16:32:59Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-17",
+    "end": "2026-05-18",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-05-15"
+    "max_observed_date": "2026-05-18"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/989P_元大_敦南/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/989P_元大_敦南/derived/stock_daily_agg.parquet",
-    "row_count": 742058,
+    "row_count": 742921,
     "min_date": "2021-07-01",
-    "max_date": "2026-05-15",
+    "max_date": "2026-05-18",
     "distinct_stock_count": 2724
   },
   "checkpoint": {
     "securities_trader_id": "989P",
     "securities_trader": "元大-敦南",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-17",
-    "next_date": "2026-05-15",
-    "last_completed_date": "2026-05-15",
-    "last_attempted_date": "2026-05-12",
-    "completed_trading_days": 1183,
-    "rows_written": 2731341,
-    "status": "pending",
-    "updated_at": "2026-05-15T15:26:35Z"
+    "end_date": "2026-05-18",
+    "next_date": null,
+    "last_completed_date": "2026-05-18",
+    "last_attempted_date": "2026-05-18",
+    "completed_trading_days": 1184,
+    "rows_written": 2735901,
+    "status": "complete",
+    "updated_at": "2026-05-18T16:32:59Z"
   }
 }

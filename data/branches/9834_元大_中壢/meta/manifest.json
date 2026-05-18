@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9834",
   "securities_trader": "元大-中壢",
-  "generated_at": "2026-05-17T14:39:09Z",
+  "generated_at": "2026-05-18T16:32:42Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-17",
+    "end": "2026-05-18",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-05-15"
+    "max_observed_date": "2026-05-18"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9834_元大_中壢/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9834_元大_中壢/derived/stock_daily_agg.parquet",
-    "row_count": 1202801,
+    "row_count": 1204097,
     "min_date": "2021-07-01",
-    "max_date": "2026-05-15",
+    "max_date": "2026-05-18",
     "distinct_stock_count": 2796
   },
   "checkpoint": {
     "securities_trader_id": "9834",
     "securities_trader": "元大-中壢",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-17",
-    "next_date": "2026-05-15",
-    "last_completed_date": "2026-05-15",
-    "last_attempted_date": "2026-05-15",
-    "completed_trading_days": 1183,
-    "rows_written": 6411229,
-    "status": "pending",
-    "updated_at": "2026-05-15T15:26:13Z"
+    "end_date": "2026-05-18",
+    "next_date": null,
+    "last_completed_date": "2026-05-18",
+    "last_attempted_date": "2026-05-18",
+    "completed_trading_days": 1184,
+    "rows_written": 6420426,
+    "status": "complete",
+    "updated_at": "2026-05-18T16:32:42Z"
   }
 }

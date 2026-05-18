@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "5854",
   "securities_trader": "統一-城中",
-  "generated_at": "2026-05-17T14:39:04Z",
+  "generated_at": "2026-05-18T16:32:17Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-17",
+    "end": "2026-05-18",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-05-15"
+    "max_observed_date": "2026-05-18"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/5854_統一_城中/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/5854_統一_城中/derived/stock_daily_agg.parquet",
-    "row_count": 667141,
+    "row_count": 667869,
     "min_date": "2021-07-01",
-    "max_date": "2026-05-15",
+    "max_date": "2026-05-18",
     "distinct_stock_count": 2685
   },
   "checkpoint": {
     "securities_trader_id": "5854",
     "securities_trader": "統一-城中",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-17",
-    "next_date": "2026-05-15",
-    "last_completed_date": "2026-05-15",
-    "last_attempted_date": "2026-05-11",
-    "completed_trading_days": 1183,
-    "rows_written": 2581396,
-    "status": "pending",
-    "updated_at": "2026-05-15T15:25:47Z"
+    "end_date": "2026-05-18",
+    "next_date": null,
+    "last_completed_date": "2026-05-18",
+    "last_attempted_date": "2026-05-18",
+    "completed_trading_days": 1184,
+    "rows_written": 2585043,
+    "status": "complete",
+    "updated_at": "2026-05-18T16:32:17Z"
   }
 }
