@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "8151",
   "securities_trader": "台新-建北",
-  "generated_at": "2026-05-18T16:32:20Z",
+  "generated_at": "2026-05-19T16:30:18Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-18",
+    "end": "2026-05-19",
     "min_observed_date": "2021-07-01",
     "max_observed_date": "2026-04-02"
   },
@@ -23,13 +23,13 @@
     "securities_trader_id": "8151",
     "securities_trader": "台新-建北",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-18",
+    "end_date": "2026-05-19",
     "next_date": null,
-    "last_completed_date": "2026-05-18",
-    "last_attempted_date": "2026-05-18",
-    "completed_trading_days": 1184,
+    "last_completed_date": "2026-05-19",
+    "last_attempted_date": "2026-05-19",
+    "completed_trading_days": 1185,
     "rows_written": 3232184,
     "status": "complete",
-    "updated_at": "2026-05-18T16:32:20Z"
+    "updated_at": "2026-05-19T16:30:18Z"
   }
 }
