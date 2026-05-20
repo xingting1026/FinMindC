@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "980a",
   "securities_trader": "元大-中山北路",
-  "generated_at": "2026-05-19T16:30:30Z",
+  "generated_at": "2026-05-20T16:31:08Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-19",
+    "end": "2026-05-20",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-05-19"
+    "max_observed_date": "2026-05-20"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/980a_元大_中山北路/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/980a_元大_中山北路/derived/stock_daily_agg.parquet",
-    "row_count": 722744,
+    "row_count": 723554,
     "min_date": "2021-07-01",
-    "max_date": "2026-05-19",
-    "distinct_stock_count": 2712
+    "max_date": "2026-05-20",
+    "distinct_stock_count": 2713
   },
   "checkpoint": {
     "securities_trader_id": "980a",
     "securities_trader": "元大-中山北路",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-19",
+    "end_date": "2026-05-20",
     "next_date": null,
-    "last_completed_date": "2026-05-19",
-    "last_attempted_date": "2026-05-19",
-    "completed_trading_days": 1185,
-    "rows_written": 2627172,
+    "last_completed_date": "2026-05-20",
+    "last_attempted_date": "2026-05-20",
+    "completed_trading_days": 1186,
+    "rows_written": 2631301,
     "status": "complete",
-    "updated_at": "2026-05-19T16:30:30Z"
+    "updated_at": "2026-05-20T16:31:08Z"
   }
 }
