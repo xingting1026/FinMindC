@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "5852",
   "securities_trader": "統一-敦南",
-  "generated_at": "2026-05-22T15:52:53Z",
+  "generated_at": "2026-05-23T14:43:15Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-22",
+    "end": "2026-05-23",
     "min_observed_date": "2021-07-01",
     "max_observed_date": "2026-05-22"
   },
@@ -23,13 +23,13 @@
     "securities_trader_id": "5852",
     "securities_trader": "統一-敦南",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-22",
-    "next_date": null,
+    "end_date": "2026-05-23",
+    "next_date": "2026-05-22",
     "last_completed_date": "2026-05-22",
     "last_attempted_date": "2026-05-22",
     "completed_trading_days": 1188,
     "rows_written": 2964507,
-    "status": "complete",
+    "status": "pending",
     "updated_at": "2026-05-22T15:52:53Z"
   }
 }
