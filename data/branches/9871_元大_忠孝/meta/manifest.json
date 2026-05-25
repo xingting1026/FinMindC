@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9871",
   "securities_trader": "元大-忠孝",
-  "generated_at": "2026-05-24T14:42:20Z",
+  "generated_at": "2026-05-25T15:57:33Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-24",
+    "end": "2026-05-25",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-05-22"
+    "max_observed_date": "2026-05-25"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9871_元大_忠孝/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9871_元大_忠孝/derived/stock_daily_agg.parquet",
-    "row_count": 862972,
+    "row_count": 864050,
     "min_date": "2021-07-01",
-    "max_date": "2026-05-22",
+    "max_date": "2026-05-25",
     "distinct_stock_count": 2739
   },
   "checkpoint": {
     "securities_trader_id": "9871",
     "securities_trader": "元大-忠孝",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-24",
-    "next_date": "2026-05-22",
-    "last_completed_date": "2026-05-22",
-    "last_attempted_date": "2026-05-22",
-    "completed_trading_days": 1188,
-    "rows_written": 3448407,
-    "status": "pending",
-    "updated_at": "2026-05-22T15:53:35Z"
+    "end_date": "2026-05-25",
+    "next_date": null,
+    "last_completed_date": "2026-05-25",
+    "last_attempted_date": "2026-05-25",
+    "completed_trading_days": 1189,
+    "rows_written": 3454233,
+    "status": "complete",
+    "updated_at": "2026-05-25T15:57:33Z"
   }
 }
