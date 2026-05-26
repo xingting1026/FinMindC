@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "989m",
   "securities_trader": "元大-信義",
-  "generated_at": "2026-05-25T15:57:45Z",
+  "generated_at": "2026-05-26T16:52:10Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-25",
+    "end": "2026-05-26",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-05-25"
+    "max_observed_date": "2026-05-26"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/989m_元大_信義/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/989m_元大_信義/derived/stock_daily_agg.parquet",
-    "row_count": 620059,
+    "row_count": 620894,
     "min_date": "2021-07-01",
-    "max_date": "2026-05-25",
-    "distinct_stock_count": 2645
+    "max_date": "2026-05-26",
+    "distinct_stock_count": 2647
   },
   "checkpoint": {
     "securities_trader_id": "989m",
     "securities_trader": "元大-信義",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-25",
+    "end_date": "2026-05-26",
     "next_date": null,
-    "last_completed_date": "2026-05-25",
-    "last_attempted_date": "2026-05-25",
-    "completed_trading_days": 1189,
-    "rows_written": 1999581,
+    "last_completed_date": "2026-05-26",
+    "last_attempted_date": "2026-05-26",
+    "completed_trading_days": 1190,
+    "rows_written": 2003602,
     "status": "complete",
-    "updated_at": "2026-05-25T15:57:45Z"
+    "updated_at": "2026-05-26T16:52:10Z"
   }
 }
