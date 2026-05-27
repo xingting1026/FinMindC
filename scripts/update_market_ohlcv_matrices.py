@@ -30,6 +30,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Update Open/High/Low/Close/Volume parquet matrices from FinMind.")
     parser.add_argument("--sleep-seconds", type=float, default=DEFAULT_SLEEP_SECONDS)
     parser.add_argument("--max-retries", type=int, default=DEFAULT_RETRIES)
+    parser.add_argument("--end-date", help="Last trading date to request. Defaults to today's date.")
     return parser.parse_args()
 
 
@@ -114,8 +115,8 @@ def main() -> int:
     stock_info = fetch_stock_info()
     trading_dates = fetch_trading_dates()
 
-    today = datetime.now().date().isoformat()
-    pending_dates = [date for date in trading_dates if str(last_date.date()) < date <= today]
+    end_date = args.end_date or datetime.now().date().isoformat()
+    pending_dates = [date for date in trading_dates if str(last_date.date()) < date <= end_date]
     if not pending_dates:
         print(json.dumps({"status": "ok", "message": "already up to date", "last_date": str(last_date.date())}, ensure_ascii=False))
         return 0

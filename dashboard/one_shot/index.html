@@ -3,691 +3,294 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>一槍策略工作台</title>
+    <title>一槍分點勝率工作台</title>
     <style>
       :root {
-        --bg: #f6f7f8;
+        --bg: #f7f8fa;
         --panel: #ffffff;
-        --ink: #15191f;
-        --muted: #667085;
-        --line: #d6dbe1;
-        --line-soft: #e7eaee;
-        --accent: #146c5f;
-        --accent-soft: #e6f3f0;
-        --red: #a53b35;
-        --red-soft: #fae9e7;
-        --blue: #265f9f;
-        --shadow: 0 10px 24px rgba(25, 33, 44, 0.08);
+        --text: #18202a;
+        --muted: #657080;
+        --line: #dfe3e8;
+        --buy: #0b7a53;
+        --accent: #2459a6;
       }
       * { box-sizing: border-box; }
       body {
         margin: 0;
-        color: var(--ink);
         background: var(--bg);
-        font-family: "Noto Sans TC", "PingFang TC", -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0;
       }
-      .shell {
-        width: min(1680px, calc(100% - 28px));
-        margin: 18px auto 36px;
-      }
-      .topbar {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        align-items: end;
-        padding: 8px 0 14px;
+      header {
+        padding: 22px 24px 14px;
         border-bottom: 1px solid var(--line);
+        background: var(--panel);
       }
-      h1 {
-        margin: 0;
-        font-size: 26px;
-        line-height: 1.2;
-      }
-      .meta {
-        margin-top: 5px;
-        color: var(--muted);
-        font-size: 13px;
-      }
-      .summary {
+      h1 { margin: 0 0 12px; font-size: 24px; font-weight: 750; }
+      h2 { margin: 0 0 12px; font-size: 18px; }
+      .metrics {
         display: grid;
-        grid-template-columns: repeat(6, minmax(130px, 1fr));
+        grid-template-columns: repeat(6, minmax(120px, 1fr));
         gap: 10px;
-        margin: 14px 0;
       }
       .metric {
-        background: var(--panel);
-        border: 1px solid var(--line-soft);
-        border-radius: 8px;
-        padding: 12px;
-        box-shadow: var(--shadow);
-      }
-      .metric .label {
-        color: var(--muted);
-        font-size: 12px;
-      }
-      .metric .value {
-        margin-top: 6px;
-        font-size: 22px;
-        font-weight: 750;
-      }
-      .ranking-panel {
-        margin-bottom: 14px;
-      }
-      .recent-panel {
-        margin-bottom: 14px;
-      }
-      .ranking-wrap {
-        overflow: auto;
-      }
-      .ranking-row, .recent-row {
-        cursor: pointer;
-      }
-      .ranking-row:hover, .recent-row:hover {
-        background: #f5faf8;
-      }
-      .rank-num {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 26px;
-        height: 26px;
-        border-radius: 999px;
-        background: var(--accent-soft);
-        color: var(--accent);
-        font-weight: 800;
-      }
-      .toolbar {
-        display: grid;
-        grid-template-columns: 1.25fr repeat(5, minmax(130px, 1fr));
-        gap: 10px;
-        margin-bottom: 14px;
-      }
-      input, select {
-        width: 100%;
         border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #fff;
-        color: var(--ink);
-        font-size: 14px;
-        padding: 10px 11px;
-      }
-      .layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1.25fr) minmax(430px, 0.75fr);
-        gap: 14px;
-        align-items: start;
-      }
-      .panel {
-        background: var(--panel);
-        border: 1px solid var(--line-soft);
-        border-radius: 8px;
-        box-shadow: var(--shadow);
-      }
-      .panel-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 14px;
-        border-bottom: 1px solid var(--line-soft);
-      }
-      .panel-head h2 {
-        margin: 0;
-        font-size: 16px;
-      }
-      .count {
-        color: var(--muted);
-        font-size: 13px;
-      }
-      .table-wrap {
-        max-height: calc(100vh - 250px);
-        overflow: auto;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-      }
-      th, td {
-        border-bottom: 1px solid var(--line-soft);
-        padding: 9px 8px;
-        text-align: right;
-        white-space: nowrap;
-      }
-      th {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        background: #f8fafb;
-        color: #475467;
-        font-weight: 700;
-      }
-      th:first-child, td:first-child,
-      th:nth-child(2), td:nth-child(2) { text-align: left; }
-      tr.event-row { cursor: pointer; }
-      tr.event-row:hover { background: #f5faf8; }
-      tr.event-row.active { background: var(--accent-soft); }
-      .tag {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 44px;
-        border-radius: 999px;
-        padding: 4px 8px;
-        font-size: 12px;
-        font-weight: 750;
-      }
-      .tag.buy { background: var(--accent-soft); color: var(--accent); }
-      .pos { color: var(--accent); font-weight: 700; }
-      .neg { color: var(--red); font-weight: 700; }
-      .detail {
-        position: sticky;
-        top: 14px;
-      }
-      .detail-body {
-        padding: 14px;
-      }
-      .detail-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-      }
-      .detail-title h2 {
-        margin: 0;
-        font-size: 22px;
-      }
-      .subline {
-        margin-top: 5px;
-        color: var(--muted);
-        font-size: 13px;
-      }
-      .detail-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-        margin-top: 12px;
-      }
-      .box {
-        border: 1px solid var(--line-soft);
-        border-radius: 8px;
-        padding: 10px;
+        border-radius: 6px;
+        padding: 10px 12px;
         background: #fbfcfd;
       }
-      .box .label {
-        color: var(--muted);
-        font-size: 12px;
-      }
-      .box .value {
-        margin-top: 5px;
-        font-size: 18px;
-        font-weight: 750;
-      }
-      canvas {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-top: 12px;
-        border: 1px solid var(--line-soft);
+      .metric .label { color: var(--muted); font-size: 12px; }
+      .metric .value { margin-top: 4px; font-size: 18px; font-weight: 720; }
+      main { padding: 18px 24px 30px; display: grid; gap: 18px; }
+      section {
+        background: var(--panel);
+        border: 1px solid var(--line);
         border-radius: 8px;
-        background: #fff;
+        padding: 14px;
       }
-      .mini-table {
-        margin-top: 12px;
-        max-height: 260px;
-        overflow: auto;
-        border: 1px solid var(--line-soft);
-        border-radius: 8px;
+      .bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 12px;
       }
-      .mini-table table { font-size: 12px; }
-      .empty {
-        padding: 20px;
+      button, select, input {
+        height: 34px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: white;
+        color: var(--text);
+        padding: 0 10px;
+        font: inherit;
+      }
+      button.active { border-color: var(--accent); background: #eaf1fb; color: var(--accent); }
+      input[type="search"] { min-width: min(360px, 100%); }
+      .table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 6px; }
+      table { border-collapse: collapse; width: 100%; min-width: 960px; font-size: 13px; }
+      th, td { border-bottom: 1px solid var(--line); padding: 9px 10px; text-align: right; white-space: nowrap; }
+      th:first-child, td:first-child, .left { text-align: left; }
+      th { position: sticky; top: 0; background: #f1f4f7; color: #3d4652; font-size: 12px; z-index: 1; }
+      tr:hover td { background: #f8fafc; }
+      .buy { color: var(--buy); font-weight: 680; }
+      .muted { color: var(--muted); }
+      .empty { padding: 18px; color: var(--muted); text-align: center; }
+      .pager {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 6px;
+        margin-top: 10px;
+      }
+      .pager button {
+        width: 34px;
+        padding: 0;
+      }
+      .pager .gap {
         color: var(--muted);
+        min-width: 18px;
+        text-align: center;
       }
-      @media (max-width: 1240px) {
-        .summary { grid-template-columns: repeat(3, minmax(130px, 1fr)); }
-        .toolbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .layout { grid-template-columns: 1fr; }
-        .detail { position: static; }
-      }
-      @media (max-width: 720px) {
-        .summary { grid-template-columns: repeat(2, minmax(130px, 1fr)); }
-        .toolbar { grid-template-columns: 1fr; }
+      @media (max-width: 900px) {
+        header, main { padding-left: 12px; padding-right: 12px; }
+        .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        table { min-width: 820px; }
       }
     </style>
   </head>
   <body>
-    <div class="shell">
-      <header class="topbar">
-        <div>
-          <h1>一槍策略工作台</h1>
-          <div class="meta" id="meta"></div>
+    <header>
+      <h1>一槍分點勝率工作台</h1>
+      <div id="metrics" class="metrics"></div>
+    </header>
+    <main>
+      <section>
+        <div class="bar">
+          <h2 style="margin-right:auto">近期高勝率買超分點出手</h2>
         </div>
-      </header>
-
-      <section class="summary" id="summary"></section>
-
-      <section class="panel ranking-panel">
-        <div class="panel-head">
-          <h2>分點一槍績效排行</h2>
-          <div class="count">買超一槍且 T+5 留半，依 20D Alpha 與樣本穩定度排序</div>
-        </div>
-        <div class="ranking-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>排行</th>
-                <th>分點</th>
-                <th>樣本</th>
-                <th>20D 勝率</th>
-                <th>20D Alpha 中位</th>
-                <th>60D Alpha 中位</th>
-                <th>120D Alpha 中位</th>
-                <th>平均一槍金額</th>
-              </tr>
-            </thead>
-            <tbody id="branch-ranking-body"></tbody>
-          </table>
-        </div>
+        <div id="recentTable" class="table-wrap"></div>
+        <div id="recentPager" class="pager"></div>
       </section>
-
-      <section class="panel recent-panel">
-        <div class="panel-head">
-          <h2>近期買超一槍</h2>
-          <div class="count">最新事件直接顯示；N/A 代表還沒有足夠未來交易日，不納入排行統計</div>
+      <section>
+        <div class="bar">
+          <h2 style="margin-right:auto">高勝率分點績效排行</h2>
         </div>
-        <div class="ranking-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>日期</th>
-                <th>分點 / 股票</th>
-                <th>一槍金額</th>
-                <th>T+5 保留</th>
-                <th>20D Alpha</th>
-                <th>60D Alpha</th>
-                <th>120D Alpha</th>
-              </tr>
-            </thead>
-            <tbody id="recent-body"></tbody>
-          </table>
+        <div id="rankTable" class="table-wrap"></div>
+        <div id="rankPager" class="pager"></div>
+      </section>
+      <section>
+        <div class="bar">
+          <h2 style="margin-right:auto">事件查詢</h2>
+          <input id="search" type="search" placeholder="搜尋股票、分點、產業" />
         </div>
+        <div id="eventTable" class="table-wrap"></div>
+        <div id="eventPager" class="pager"></div>
       </section>
-
-      <section class="toolbar">
-        <input id="search" type="search" placeholder="搜尋分點、股票、產業" />
-        <select id="branch-filter"></select>
-        <select id="retention-filter">
-          <option value="-999">不篩保留率</option>
-          <option value="0.5">T+5 保留 >= 50%</option>
-          <option value="0">T+5 未完全出掉</option>
-          <option value="0.8">T+5 保留 >= 80%</option>
-        </select>
-        <select id="sort-filter">
-          <option value="date">日期</option>
-          <option value="alpha_20d">20D Alpha</option>
-          <option value="alpha_60d">60D Alpha</option>
-          <option value="alpha_120d">120D Alpha</option>
-          <option value="abs_net_amount">一槍金額</option>
-        </select>
-        <select id="industry-filter"></select>
-      </section>
-
-      <main class="layout">
-        <section class="panel">
-          <div class="panel-head">
-            <h2>事件清單</h2>
-            <div class="count" id="count"></div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>日期</th>
-                  <th>分點 / 股票</th>
-                  <th>一槍金額</th>
-                  <th>T+5 保留</th>
-                  <th>10D</th>
-                  <th>10D Alpha</th>
-                  <th>20D</th>
-                  <th>20D Alpha</th>
-                  <th>60D Alpha</th>
-                  <th>120D Alpha</th>
-                </tr>
-              </thead>
-              <tbody id="event-body"></tbody>
-            </table>
-          </div>
-        </section>
-
-        <aside class="panel detail">
-          <div class="detail-body" id="detail"></div>
-        </aside>
-      </main>
-    </div>
-
-    <script src="./one-shot-data.js"></script>
+    </main>
+    <script src="./one-shot-full-market-data.js"></script>
     <script>
-      const payload = window.ONE_SHOT_DASHBOARD;
-      const events = payload.events;
-      const branchRankings = payload.branch_rankings || [];
-      const windows = payload.event_windows;
-      const followups = payload.followups;
-      let activeEventId = events[0]?.event_id || null;
-      let filters = {
-        query: "",
-        branch: "all",
-        retention: -999,
-        sort: "date",
-        industry: "all",
-      };
+      const DATA = window.ONE_SHOT_FULL_MARKET;
+      const inflate = (cols, rows) => rows.map(row => Object.fromEntries(cols.map((col, idx) => [col, row[idx]])));
+      const RANKINGS = inflate(DATA.columns.rankings, DATA.rankings);
+      const RECENT = inflate(DATA.columns.recent, DATA.recent);
+      const EVENTS = inflate(DATA.columns.events, DATA.events);
+      const fmt = (v, d = 2) => v == null || Number.isNaN(v) ? "N/A" : Number(v).toLocaleString("zh-TW", { maximumFractionDigits: d, minimumFractionDigits: d });
+      const int = (v) => v == null ? "N/A" : Number(v).toLocaleString("zh-TW");
+      const pct = (v) => v == null ? "N/A" : `${fmt(v * 100, 1)}%`;
+      const amount = (v) => v == null ? "N/A" : `${fmt(v / 100000000, 2)} 億`;
+      const PAGE_SIZE = 25;
+      let rankPage = 1;
+      let recentPage = 1;
+      let eventPage = 1;
 
-      const fmt = (value, digits = 2) => value == null ? "N/A" : Number(value).toLocaleString("zh-Hant-TW", { maximumFractionDigits: digits, minimumFractionDigits: digits });
-      const pct = (value) => value == null ? "N/A" : `${fmt(value * 100, 1)}%`;
-      const cls = (value) => value == null ? "" : Number(value) >= 0 ? "pos" : "neg";
-      const signedPct = (value) => value == null ? "N/A" : `${Number(value) >= 0 ? "+" : ""}${fmt(value * 100, 1)}%`;
-      const amount = (value) => value == null ? "N/A" : `${fmt(value / 100000000, 2)} 億`;
-
-      function renderMeta() {
-        const s = payload.summary;
-        document.getElementById("meta").textContent = `門檻 ${fmt(s.threshold / 100000000, 0)} 億 ｜ T+${s.retention_days} 保留率 ｜ Benchmark ${s.benchmark}`;
-      }
-
-      function renderSummary(list = events) {
-        const kept = list.filter((event) => event.retained_ratio_5d >= 0.5);
-        const valid20 = kept.filter((event) => event.alpha_20d != null);
-        const valid60 = kept.filter((event) => event.alpha_60d != null);
-        const median = (items, key) => {
-          const values = items.map((event) => event[key]).filter((value) => value != null).sort((a, b) => a - b);
-          if (!values.length) return null;
-          const mid = Math.floor(values.length / 2);
-          return values.length % 2 ? values[mid] : (values[mid - 1] + values[mid]) / 2;
-        };
-        const cards = [
-          ["顯示買超", list.length],
-          ["T+5 留半", kept.length],
-          ["20D 勝率", valid20.length ? (valid20.filter((event) => event.alpha_20d > 0).length / valid20.length) : null, "pct"],
-          ["20D Alpha 中位", median(kept, "alpha_20d"), "pct"],
-          ["60D Alpha 中位", median(valid60, "alpha_60d"), "pct"],
+      function renderMetrics() {
+        const m = DATA.meta;
+        const rows = [
+          ["資料期間", `${m.date_min} ~ ${m.date_max}`],
+          ["高勝率事件", int(m.event_count)],
+          ["高勝率分點", int(m.branch_count)],
+          ["全市場買超事件", int(m.source_buy_event_count)],
+          ["樣本範圍", `${int(m.min_events)} ~ ${int(m.max_events)}`],
+          ["門檻", amount(m.threshold)],
         ];
-        document.getElementById("summary").innerHTML = cards.map(([label, value, type]) => `
-          <div class="metric">
-            <div class="label">${label}</div>
-            <div class="value ${type === "pct" ? cls(value) : ""}">${type === "pct" ? pct(value) : fmt(value, 0)}</div>
-          </div>
-        `).join("");
+        document.getElementById("metrics").innerHTML = rows.map(([label, value]) => `<div class="metric"><div class="label">${label}</div><div class="value">${value}</div></div>`).join("");
       }
 
-      function renderBranchRankings() {
-        const tbody = document.getElementById("branch-ranking-body");
-        if (!branchRankings.length) {
-          tbody.innerHTML = `<tr><td colspan="8" class="empty">目前沒有符合預設策略的分點樣本。</td></tr>`;
+      function table(headers, rows, emptyText) {
+        if (!rows.length) return `<div class="empty">${emptyText}</div>`;
+        return `<table><thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table>`;
+      }
+
+      function pageItems(items, page) {
+        const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
+        const safePage = Math.min(Math.max(1, page), totalPages);
+        const start = (safePage - 1) * PAGE_SIZE;
+        return { rows: items.slice(start, start + PAGE_SIZE), page: safePage, totalPages };
+      }
+
+      function pagesAround(page, totalPages) {
+        const wanted = new Set([1, totalPages, page - 2, page - 1, page, page + 1, page + 2]);
+        const pages = [...wanted].filter(p => p >= 1 && p <= totalPages).sort((a, b) => a - b);
+        return pages.reduce((out, p, idx) => {
+          if (idx && p - pages[idx - 1] > 1) out.push("gap");
+          out.push(p);
+          return out;
+        }, []);
+      }
+
+      function renderPager(id, page, totalPages, fnName) {
+        const el = document.getElementById(id);
+        if (totalPages <= 1) {
+          el.innerHTML = "";
           return;
         }
-        tbody.innerHTML = branchRankings.map((row, index) => `
-          <tr class="ranking-row" data-branch-id="${row.branch_id}">
-            <td><span class="rank-num">${index + 1}</span></td>
-            <td>${row.branch_name}<br>${row.branch_id}</td>
-            <td>${fmt(row.sample_count, 0)} / 有效 ${fmt(row.valid_20d_count, 0)}</td>
-            <td class="${cls(row.win_rate_alpha_20d)}">${pct(row.win_rate_alpha_20d)}</td>
-            <td class="${cls(row.median_alpha_20d)}">${signedPct(row.median_alpha_20d)}</td>
-            <td class="${cls(row.median_alpha_60d)}">${signedPct(row.median_alpha_60d)}</td>
-            <td class="${cls(row.median_alpha_120d)}">${signedPct(row.median_alpha_120d)}</td>
-            <td>${amount(row.avg_amount)}</td>
-          </tr>
-        `).join("");
-
-        Array.from(tbody.querySelectorAll(".ranking-row")).forEach((row) => {
-          row.addEventListener("click", () => {
-            filters.branch = row.dataset.branchId;
-            filters.retention = 0.5;
-            document.getElementById("branch-filter").value = filters.branch;
-            document.getElementById("retention-filter").value = String(filters.retention);
-            render();
-          });
-        });
+        el.innerHTML = pagesAround(page, totalPages).map(p => {
+          if (p === "gap") return `<span class="gap">...</span>`;
+          return `<button class="${p === page ? "active" : ""}" onclick="${fnName}(${p})">${p}</button>`;
+        }).join("");
       }
 
-      function renderRecentEvents() {
-        const tbody = document.getElementById("recent-body");
-        const recent = [...events].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 20);
-        if (!recent.length) {
-          tbody.innerHTML = `<tr><td colspan="7" class="empty">目前沒有近期事件。</td></tr>`;
-          return;
-        }
-        tbody.innerHTML = recent.map((event) => `
-          <tr class="recent-row" data-event-id="${event.event_id}">
-            <td>${event.date}</td>
-            <td>${event.branch_name}<br>${event.stock_id} ${event.stock_name || ""}</td>
-            <td>${amount(event.abs_net_amount)}</td>
-            <td class="${cls(event.retained_ratio_5d)}">${pct(event.retained_ratio_5d)}</td>
-            <td class="${cls(event.alpha_20d)}">${signedPct(event.alpha_20d)}</td>
-            <td class="${cls(event.alpha_60d)}">${signedPct(event.alpha_60d)}</td>
-            <td class="${cls(event.alpha_120d)}">${signedPct(event.alpha_120d)}</td>
-          </tr>
-        `).join("");
-
-        Array.from(tbody.querySelectorAll(".recent-row")).forEach((row) => {
-          row.addEventListener("click", () => {
-            activeEventId = row.dataset.eventId;
-            renderDetail();
-            renderEventTable(filteredEvents());
-          });
-        });
+      function renderRankings() {
+        const paged = pageItems(RANKINGS, rankPage);
+        rankPage = paged.page;
+        const rows = paged.rows
+          .map(r => `<tr>
+            <td class="left"><b>${r.broker_id}</b> ${r.broker_name}</td>
+            <td>${int(r.valid_5d)}</td>
+            <td>${int(r.n_stocks)}</td>
+            <td>${int(r.n_dates)}</td>
+            <td>${pct(r.win_rate_5d)}</td>
+            <td class="${r.mean_direction_ret_5d >= 0 ? "buy" : ""}">${pct(r.mean_direction_ret_5d)}</td>
+            <td>${pct(r.win_rate_10d)}</td>
+            <td>${fmt(r.score, 2)}</td>
+            <td>${amount(r.median_abs_net_M * 1000000)}</td>
+          </tr>`);
+        document.getElementById("rankTable").innerHTML = table(
+          ["分點", "樣本", "股票", "日期", "5日勝率", "5日均報酬", "10日勝率", "分數", "中位淨額"],
+          rows,
+          "沒有符合條件的分點"
+        );
+        renderPager("rankPager", paged.page, paged.totalPages, "setRankPage");
       }
 
-      function setupFilters() {
-        const branchSelect = document.getElementById("branch-filter");
-        const branches = Array.from(new Map(events.map((event) => [event.branch_id, `${event.branch_name} (${event.branch_id})`])).entries())
-          .sort((a, b) => a[1].localeCompare(b[1], "zh-Hant"));
-        branchSelect.innerHTML = `<option value="all">全部分點</option>` + branches.map(([id, name]) => `<option value="${id}">${name}</option>`).join("");
-
-        const industrySelect = document.getElementById("industry-filter");
-        const industries = Array.from(new Set(events.map((event) => event.industry_category || "未分類"))).sort((a, b) => a.localeCompare(b, "zh-Hant"));
-        industrySelect.innerHTML = `<option value="all">全部產業</option>` + industries.map((name) => `<option value="${name}">${name}</option>`).join("");
-
-        document.getElementById("search").addEventListener("input", (event) => {
-          filters.query = event.target.value.trim().toLowerCase();
-          render();
-        });
-        branchSelect.addEventListener("change", (event) => {
-          filters.branch = event.target.value;
-          render();
-        });
-        document.getElementById("retention-filter").addEventListener("change", (event) => {
-          filters.retention = Number(event.target.value);
-          render();
-        });
-        document.getElementById("sort-filter").addEventListener("change", (event) => {
-          filters.sort = event.target.value;
-          render();
-        });
-        industrySelect.addEventListener("change", (event) => {
-          filters.industry = event.target.value;
-          render();
-        });
+      function renderRecent() {
+        const paged = pageItems(RECENT, recentPage);
+        recentPage = paged.page;
+        const rows = paged.rows
+          .map(r => `<tr>
+            <td class="left">${r.date}</td>
+            <td class="left"><b>${r.broker_id}</b> ${r.broker_name}</td>
+            <td class="left"><b>${r.stock_id}</b> ${r.stock_name || ""}</td>
+            <td>${amount(r.abs_net_amount)}</td>
+            <td>${pct(r.side_purity)}</td>
+            <td>${pct(r.branch_win_rate_5d)}</td>
+            <td class="${r.direction_ret_5d >= 0 ? "buy" : ""}">${pct(r.direction_ret_5d)}</td>
+            <td class="${r.direction_ret_10d >= 0 ? "buy" : ""}">${pct(r.direction_ret_10d)}</td>
+          </tr>`);
+        document.getElementById("recentTable").innerHTML = table(
+          ["日期", "分點", "股票", "淨額", "純度", "分點5日勝率", "事件5日", "事件10日"],
+          rows,
+          "近期沒有高勝率分點事件"
+        );
+        renderPager("recentPager", paged.page, paged.totalPages, "setRecentPage");
       }
 
-      function filteredEvents() {
-        const query = filters.query;
-        return events.filter((event) => {
-          if (filters.branch !== "all" && event.branch_id !== filters.branch) return false;
-          if (filters.industry !== "all" && (event.industry_category || "未分類") !== filters.industry) return false;
-          if (filters.retention > -900 && event.retained_ratio_5d < filters.retention) return false;
-          if (query) {
-            const haystack = `${event.branch_id} ${event.branch_name} ${event.stock_id} ${event.stock_name || ""} ${event.industry_category || ""}`.toLowerCase();
-            if (!haystack.includes(query)) return false;
-          }
-          return true;
-        }).sort((a, b) => {
-          if (filters.sort === "date") return b.date.localeCompare(a.date);
-          const av = a[filters.sort] == null ? -Infinity : a[filters.sort];
-          const bv = b[filters.sort] == null ? -Infinity : b[filters.sort];
-          return bv - av;
-        });
+      function renderEvents() {
+        const q = document.getElementById("search").value.trim().toLowerCase();
+        const filtered = EVENTS
+          .filter(r => !q || `${r.stock_id} ${r.stock_name || ""} ${r.industry || ""} ${r.broker_id} ${r.broker_name}`.toLowerCase().includes(q))
+        const paged = pageItems(filtered, eventPage);
+        eventPage = paged.page;
+        const rows = paged.rows
+          .map(r => `<tr>
+            <td class="left">${r.date}</td>
+            <td class="left"><b>${r.stock_id}</b> ${r.stock_name || ""}</td>
+            <td class="left"><b>${r.broker_id}</b> ${r.broker_name}</td>
+            <td>${amount(r.abs_net_amount)}</td>
+            <td>${pct(r.side_purity)}</td>
+            <td>${pct(r.branch_win_rate_5d)}</td>
+            <td class="${r.direction_ret_1d >= 0 ? "buy" : ""}">${pct(r.direction_ret_1d)}</td>
+            <td class="${r.direction_ret_5d >= 0 ? "buy" : ""}">${pct(r.direction_ret_5d)}</td>
+            <td class="${r.direction_ret_20d >= 0 ? "buy" : ""}">${pct(r.direction_ret_20d)}</td>
+          </tr>`);
+        document.getElementById("eventTable").innerHTML = table(
+          ["日期", "股票", "分點", "淨額", "純度", "分點5日勝率", "1日", "5日", "20日"],
+          rows,
+          "沒有符合條件的事件"
+        );
+        renderPager("eventPager", paged.page, paged.totalPages, "setEventPage");
       }
 
-      function renderEventTable(list) {
-        if (!list.find((event) => event.event_id === activeEventId)) {
-          activeEventId = list[0]?.event_id || null;
-        }
-        document.getElementById("count").textContent = `顯示 ${list.length} 筆`;
-        const tbody = document.getElementById("event-body");
-        if (!list.length) {
-          tbody.innerHTML = `<tr><td colspan="10" class="empty">沒有符合條件的事件。</td></tr>`;
-          return;
-        }
-        tbody.innerHTML = list.map((event) => `
-          <tr class="event-row ${event.event_id === activeEventId ? "active" : ""}" data-event-id="${event.event_id}">
-            <td>${event.date}</td>
-            <td>${event.branch_name}<br>${event.stock_id} ${event.stock_name || ""}</td>
-            <td>${amount(event.abs_net_amount)}</td>
-            <td class="${cls(event.retained_ratio_5d)}">${pct(event.retained_ratio_5d)}</td>
-            <td class="${cls(event.direction_return_10d)}">${signedPct(event.direction_return_10d)}</td>
-            <td class="${cls(event.alpha_10d)}">${signedPct(event.alpha_10d)}</td>
-            <td class="${cls(event.direction_return_20d)}">${signedPct(event.direction_return_20d)}</td>
-            <td class="${cls(event.alpha_20d)}">${signedPct(event.alpha_20d)}</td>
-            <td class="${cls(event.alpha_60d)}">${signedPct(event.alpha_60d)}</td>
-            <td class="${cls(event.alpha_120d)}">${signedPct(event.alpha_120d)}</td>
-          </tr>
-        `).join("");
-        Array.from(tbody.querySelectorAll(".event-row")).forEach((row) => {
-          row.addEventListener("click", () => {
-            activeEventId = row.dataset.eventId;
-            render();
-          });
-        });
+      function setRankPage(page) {
+        rankPage = page;
+        renderRankings();
       }
 
-      function drawChart(event) {
-        const canvas = document.getElementById("chart");
-        if (!canvas) return;
-        const ctx = canvas.getContext("2d");
-        const rows = windows[event.event_id] || [];
-        const w = canvas.width;
-        const h = canvas.height;
-        const pad = { left: 48, right: 18, top: 18, bottom: 30 };
-        ctx.clearRect(0, 0, w, h);
-        ctx.fillStyle = "#ffffff";
-        ctx.fillRect(0, 0, w, h);
-        if (!rows.length) return;
-        const values = rows.flatMap((row) => [row.stock_norm, row.market_norm]).filter((value) => value != null);
-        const min = Math.min(...values, 92);
-        const max = Math.max(...values, 108);
-        const range = Math.max(max - min, 1);
-        const x = (i) => pad.left + (w - pad.left - pad.right) * (i / Math.max(rows.length - 1, 1));
-        const y = (value) => pad.top + (max - value) / range * (h - pad.top - pad.bottom);
-
-        ctx.strokeStyle = "#e2e6ea";
-        ctx.lineWidth = 1;
-        for (let i = 0; i < 5; i += 1) {
-          const gy = pad.top + (h - pad.top - pad.bottom) * (i / 4);
-          ctx.beginPath();
-          ctx.moveTo(pad.left, gy);
-          ctx.lineTo(w - pad.right, gy);
-          ctx.stroke();
-        }
-
-        const drawLine = (key, color) => {
-          ctx.strokeStyle = color;
-          ctx.lineWidth = 2;
-          ctx.beginPath();
-          let started = false;
-          rows.forEach((row, i) => {
-            if (row[key] == null) return;
-            const px = x(i);
-            const py = y(row[key]);
-            if (!started) {
-              ctx.moveTo(px, py);
-              started = true;
-            } else {
-              ctx.lineTo(px, py);
-            }
-          });
-          ctx.stroke();
-        };
-        drawLine("market_norm", "#8a96a3");
-        drawLine("stock_norm", "#146c5f");
-
-        const fiveIndex = Math.min(5, rows.length - 1);
-        ctx.strokeStyle = "#265f9f";
-        ctx.setLineDash([4, 4]);
-        ctx.beginPath();
-        ctx.moveTo(x(fiveIndex), pad.top);
-        ctx.lineTo(x(fiveIndex), h - pad.bottom);
-        ctx.stroke();
-        ctx.setLineDash([]);
-
-        ctx.fillStyle = "#667085";
-        ctx.font = "12px sans-serif";
-        ctx.fillText(`${max.toFixed(0)}`, 8, y(max) + 4);
-        ctx.fillText(`${min.toFixed(0)}`, 8, y(min) + 4);
-        ctx.fillText(rows[0].date.slice(5), pad.left, h - 8);
-        ctx.fillText(rows[rows.length - 1].date.slice(5), w - 58, h - 8);
+      function setRecentPage(page) {
+        recentPage = page;
+        renderRecent();
       }
 
-      function renderDetail() {
-        const event = events.find((item) => item.event_id === activeEventId);
-        const root = document.getElementById("detail");
-        if (!event) {
-          root.innerHTML = `<div class="empty">請選擇一筆事件。</div>`;
-          return;
-        }
-        root.innerHTML = `
-          <div class="detail-title">
-            <div>
-              <h2>${event.stock_id} ${event.stock_name || ""}</h2>
-              <div class="subline">${event.branch_name} ｜ ${event.date} ｜ ${event.industry_category || "未分類"}</div>
-            </div>
-            <span class="tag buy">買超</span>
-          </div>
-          <div class="detail-grid">
-            <div class="box"><div class="label">一槍金額</div><div class="value">${amount(event.abs_net_amount)}</div></div>
-            <div class="box"><div class="label">進場價</div><div class="value">${fmt(event.entry_price, 2)}</div></div>
-            <div class="box"><div class="label">T+5 保留</div><div class="value ${cls(event.retained_ratio_5d)}">${pct(event.retained_ratio_5d)}</div></div>
-            <div class="box"><div class="label">10D Alpha</div><div class="value ${cls(event.alpha_10d)}">${signedPct(event.alpha_10d)}</div></div>
-            <div class="box"><div class="label">20D Alpha</div><div class="value ${cls(event.alpha_20d)}">${signedPct(event.alpha_20d)}</div></div>
-            <div class="box"><div class="label">60D Alpha</div><div class="value ${cls(event.alpha_60d)}">${signedPct(event.alpha_60d)}</div></div>
-            <div class="box"><div class="label">120D Alpha</div><div class="value ${cls(event.alpha_120d)}">${signedPct(event.alpha_120d)}</div></div>
-            <div class="box"><div class="label">20D 大盤</div><div class="value ${cls(event.market_return_20d)}">${signedPct(event.market_return_20d)}</div></div>
-          </div>
-          <canvas id="chart" width="640" height="320"></canvas>
-          <div class="mini-table">
-            <table>
-              <thead>
-                <tr><th>T</th><th>日期</th><th>收盤</th><th>買張</th><th>賣張</th><th>淨張</th><th>淨額</th></tr>
-              </thead>
-              <tbody>
-                ${(followups[event.event_id] || []).map((row) => `
-                  <tr>
-                    <td>T+${row.offset}</td>
-                    <td>${row.date}</td>
-                    <td>${fmt(row.close, 2)}</td>
-                    <td>${fmt(row.buy_lots, 0)}</td>
-                    <td>${fmt(row.sell_lots, 0)}</td>
-                    <td class="${cls(row.net_lots)}">${fmt(row.net_lots, 0)}</td>
-                    <td class="${cls(row.net_amount_billion)}">${fmt(row.net_amount_billion, 2)} 億</td>
-                  </tr>
-                `).join("")}
-              </tbody>
-            </table>
-          </div>
-        `;
-        drawChart(event);
+      function setEventPage(page) {
+        eventPage = page;
+        renderEvents();
       }
 
-      function render() {
-        const list = filteredEvents();
-        renderSummary(list);
-        renderEventTable(list);
-        renderDetail();
-      }
+      window.setRankPage = setRankPage;
+      window.setRecentPage = setRecentPage;
+      window.setEventPage = setEventPage;
 
-      renderMeta();
-      setupFilters();
-      renderBranchRankings();
-      renderRecentEvents();
-      render();
+      document.getElementById("search").addEventListener("input", () => {
+        eventPage = 1;
+        renderEvents();
+      });
+
+      renderMetrics();
+      renderRecent();
+      renderRankings();
+      renderEvents();
     </script>
   </body>
 </html>

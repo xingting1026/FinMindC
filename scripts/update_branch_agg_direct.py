@@ -26,6 +26,7 @@ from fetch_branch_data import (
     normalize_raw_frame,
     save_checkpoint,
     save_manifest,
+    slugify,
 )
 
 
@@ -43,6 +44,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sleep-seconds", type=float, default=DEFAULT_SLEEP_SECONDS)
     parser.add_argument("--max-retries", type=int, default=DEFAULT_RETRIES)
     parser.add_argument("--branch-id", action="append", help="Optional branch id to refresh. Repeatable.")
+    parser.add_argument("--branch-list-csv", help="CSV with broker_id and broker_name columns for missing target folders.")
     parser.add_argument("--exclude-branch-id", action="append", default=[], help="Branch id to skip. Repeatable.")
     return parser.parse_args()
 
@@ -75,8 +77,35 @@ def load_manifest(branch_dir: Path) -> dict[str, Any]:
     return {"securities_trader_id": branch_id, "securities_trader": branch_name}
 
 
-def local_branches(root: Path, selected_ids: Optional[set[str]], excluded_ids: set[str]) -> list[tuple[Path, str, str]]:
+def load_branch_targets(path: Optional[str]) -> dict[str, str]:
+    if not path:
+        return {}
+    csv_path = output_root_path(path)
+    if not csv_path.exists():
+        return {}
+    frame = pd.read_csv(csv_path, dtype={"broker_id": str})
+    if "broker_id" not in frame.columns:
+        return {}
+    name_col = "broker_name" if "broker_name" in frame.columns else None
+    targets: dict[str, str] = {}
+    for row in frame.to_dict(orient="records"):
+        branch_id = str(row.get("broker_id") or "").strip()
+        if not branch_id:
+            continue
+        branch_name = str(row.get(name_col) or branch_id) if name_col else branch_id
+        targets[branch_id] = branch_name
+    return targets
+
+
+def local_branches(
+    root: Path,
+    selected_ids: Optional[set[str]],
+    excluded_ids: set[str],
+    target_names: Optional[dict[str, str]] = None,
+) -> list[tuple[Path, str, str]]:
+    target_names = target_names or {}
     branches: list[tuple[Path, str, str]] = []
+    seen_ids: set[str] = set()
     for branch_dir in sorted(root.glob("*")):
         if not branch_dir.is_dir():
             continue
@@ -87,6 +116,14 @@ def local_branches(root: Path, selected_ids: Optional[set[str]], excluded_ids: s
             continue
         if branch_id in excluded_ids:
             continue
+        seen_ids.add(branch_id)
+        branches.append((branch_dir, branch_id, branch_name))
+    for branch_id, branch_name in sorted(target_names.items()):
+        if branch_id in seen_ids or branch_id in excluded_ids:
+            continue
+        if selected_ids and branch_id not in selected_ids:
+            continue
+        branch_dir = root / f"{branch_id}_{slugify(branch_name)}"
         branches.append((branch_dir, branch_id, branch_name))
     return branches
 
@@ -242,9 +279,10 @@ def refresh_branch(
 def main() -> int:
     args = parse_args()
     root = output_root_path(args.output_root)
-    selected_ids = set(args.branch_id or []) or None
+    target_names = load_branch_targets(args.branch_list_csv)
+    selected_ids = set(args.branch_id or target_names.keys()) or None
     excluded_ids = DEFAULT_EXCLUDED_BRANCH_IDS | set(args.exclude_branch_id or [])
-    branches = local_branches(root, selected_ids, excluded_ids)
+    branches = local_branches(root, selected_ids, excluded_ids, target_names)
     if not branches:
         raise SystemExit("No local branch folders matched.")
 
