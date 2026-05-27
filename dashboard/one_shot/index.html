@@ -204,11 +204,10 @@
             <td>${pct(r.win_rate_5d)}</td>
             <td class="${r.mean_direction_ret_5d >= 0 ? "buy" : ""}">${pct(r.mean_direction_ret_5d)}</td>
             <td>${pct(r.win_rate_10d)}</td>
-            <td>${fmt(r.score, 2)}</td>
             <td>${amount(r.median_abs_net_M * 1000000)}</td>
           </tr>`);
         document.getElementById("rankTable").innerHTML = table(
-          ["分點", "樣本", "股票", "日期", "5日勝率", "5日均報酬", "10日勝率", "分數", "中位淨額"],
+          ["分點", "樣本", "股票", "日期", "5日勝率", "5日均報酬", "10日勝率", "中位淨額"],
           rows,
           "沒有符合條件的分點"
         );

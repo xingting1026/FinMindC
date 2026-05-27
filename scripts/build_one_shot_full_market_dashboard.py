@@ -178,12 +178,19 @@ def normalize_summary(summary: pd.DataFrame) -> pd.DataFrame:
         "mean_direction_ret_5d",
         "win_rate_10d",
         "mean_direction_ret_10d",
-        "score",
     ]
     for col in numeric_cols:
         if col in summary.columns:
             summary[col] = pd.to_numeric(summary[col], errors="coerce")
-    return summary[summary["is_high_win"] & summary["side"].eq("buy")].reset_index(drop=True)
+    summary = summary[summary["is_high_win"] & summary["side"].eq("buy")].copy()
+    if "score" in summary.columns:
+        summary = summary.drop(columns=["score"])
+    summary = summary.sort_values(
+        ["win_rate_5d", "valid_5d", "mean_direction_ret_5d", "n_events"],
+        ascending=[False, False, False, False],
+    ).reset_index(drop=True)
+    summary["rank"] = np.arange(1, len(summary) + 1)
+    return summary
 
 
 def load_branch_summary(path: Path) -> pd.DataFrame:
@@ -327,7 +334,6 @@ def summarize_by_branch(
         wins5 = int((ret5 > 0).sum()) if n else 0
         win5 = wins5 / n if n else np.nan
         mean5 = float(ret5.mean()) if n else np.nan
-        score = (win5 - 0.5) * 100.0 + max(min(mean5, 0.08), -0.08) * 100.0
         is_high_win = bool(min_events <= n <= max_events and win5 >= high_win_rate and mean5 > 0)
         rows.append(
             {
@@ -346,7 +352,6 @@ def summarize_by_branch(
                 "median_direction_ret_5d": float(ret5.median()) if n else np.nan,
                 "win_rate_10d": float((ret10 > 0).mean()) if len(ret10) else np.nan,
                 "mean_direction_ret_10d": float(ret10.mean()) if len(ret10) else np.nan,
-                "score": float(score) if np.isfinite(score) else np.nan,
                 "is_high_win": is_high_win,
             }
         )
@@ -357,7 +362,8 @@ def summarize_by_branch(
     summary["broker_name"] = summary["broker_id"].map(broker_names).fillna(summary["broker_id"])
     summary = summary[summary["is_high_win"]].copy()
     summary = summary.sort_values(
-        ["score", "valid_5d", "n_events"], ascending=[False, False, False]
+        ["win_rate_5d", "valid_5d", "mean_direction_ret_5d", "n_events"],
+        ascending=[False, False, False, False],
     ).reset_index(drop=True)
     summary["rank"] = np.arange(1, len(summary) + 1)
     return summary
@@ -369,7 +375,6 @@ def enrich_events(events: pd.DataFrame, branch_summary: pd.DataFrame) -> pd.Data
     stale_stats = [
         "branch_win_rate_5d",
         "branch_mean_direction_ret_5d",
-        "branch_score",
         "branch_valid_5d",
         "is_high_win",
     ]
@@ -385,7 +390,6 @@ def enrich_events(events: pd.DataFrame, branch_summary: pd.DataFrame) -> pd.Data
         "side",
         "win_rate_5d",
         "mean_direction_ret_5d",
-        "score",
         "is_high_win",
         "valid_5d",
     ]
@@ -393,7 +397,6 @@ def enrich_events(events: pd.DataFrame, branch_summary: pd.DataFrame) -> pd.Data
         columns={
             "win_rate_5d": "branch_win_rate_5d",
             "mean_direction_ret_5d": "branch_mean_direction_ret_5d",
-            "score": "branch_score",
             "valid_5d": "branch_valid_5d",
         }
     )
@@ -452,7 +455,7 @@ def build_payload(
     latest_dates = sorted(events["date"].dropna().unique())
     recent_cut = latest_dates[-recent_days] if len(latest_dates) >= recent_days else latest_dates[0]
     recent = events[events["date"] >= recent_cut].copy()
-    recent = recent.sort_values(["date", "branch_score", "abs_net_amount"], ascending=[False, False, False])
+    recent = recent.sort_values(["date", "branch_win_rate_5d", "abs_net_amount"], ascending=[False, False, False])
 
     ranking_cols = [
         "rank",
@@ -468,7 +471,6 @@ def build_payload(
         "mean_direction_ret_5d",
         "win_rate_10d",
         "mean_direction_ret_10d",
-        "score",
     ]
     event_cols = [
         "event_id",
@@ -491,7 +493,6 @@ def build_payload(
         "direction_ret_20d",
         "branch_win_rate_5d",
         "branch_mean_direction_ret_5d",
-        "branch_score",
         "branch_valid_5d",
     ]
     return {
@@ -731,11 +732,10 @@ def render_html() -> str:
             <td>${pct(r.win_rate_5d)}</td>
             <td class="${r.mean_direction_ret_5d >= 0 ? "buy" : ""}">${pct(r.mean_direction_ret_5d)}</td>
             <td>${pct(r.win_rate_10d)}</td>
-            <td>${fmt(r.score, 2)}</td>
             <td>${amount(r.median_abs_net_M * 1000000)}</td>
           </tr>`);
         document.getElementById("rankTable").innerHTML = table(
-          ["分點", "樣本", "股票", "日期", "5日勝率", "5日均報酬", "10日勝率", "分數", "中位淨額"],
+          ["分點", "樣本", "股票", "日期", "5日勝率", "5日均報酬", "10日勝率", "中位淨額"],
           rows,
           "沒有符合條件的分點"
         );
