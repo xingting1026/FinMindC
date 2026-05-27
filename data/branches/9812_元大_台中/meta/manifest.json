@@ -1,0 +1,35 @@
+{
+  "securities_trader_id": "9812",
+  "securities_trader": "元大-台中",
+  "generated_at": "2026-05-27T08:30:06Z",
+  "date_range": {
+    "start": "2026-01-01",
+    "end": "2026-05-26",
+    "min_observed_date": "2026-01-02",
+    "max_observed_date": "2026-05-26"
+  },
+  "raw": {
+    "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9812_元大_台中/raw/trading_daily_detail.parquet",
+    "row_count": 0
+  },
+  "derived": {
+    "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9812_元大_台中/derived/stock_daily_agg.parquet",
+    "row_count": 85844,
+    "min_date": "2026-01-02",
+    "max_date": "2026-05-26",
+    "distinct_stock_count": 2428
+  },
+  "checkpoint": {
+    "securities_trader_id": "9812",
+    "securities_trader": "元大-台中",
+    "start_date": "2026-01-01",
+    "end_date": "2026-05-26",
+    "next_date": null,
+    "last_completed_date": "2026-05-26",
+    "last_attempted_date": "2026-05-26",
+    "completed_trading_days": 92,
+    "rows_written": 435922,
+    "status": "complete",
+    "updated_at": "2026-05-27T08:30:06Z"
+  }
+}

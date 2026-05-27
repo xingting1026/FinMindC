@@ -1,0 +1,13 @@
+{
+  "securities_trader_id": "1230",
+  "securities_trader": "彰銀",
+  "start_date": "2026-01-01",
+  "end_date": "2026-05-26",
+  "next_date": null,
+  "last_completed_date": "2026-05-26",
+  "last_attempted_date": "2026-05-26",
+  "completed_trading_days": 92,
+  "rows_written": 181900,
+  "status": "complete",
+  "updated_at": "2026-05-27T08:19:43Z"
+}

@@ -1,0 +1,35 @@
+{
+  "securities_trader_id": "9A8F",
+  "securities_trader": "永豐金-敦南",
+  "generated_at": "2026-05-27T08:31:40Z",
+  "date_range": {
+    "start": "2026-01-01",
+    "end": "2026-05-26",
+    "min_observed_date": "2026-01-02",
+    "max_observed_date": "2026-05-26"
+  },
+  "raw": {
+    "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9A8F_永豐金_敦南/raw/trading_daily_detail.parquet",
+    "row_count": 0
+  },
+  "derived": {
+    "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9A8F_永豐金_敦南/derived/stock_daily_agg.parquet",
+    "row_count": 107235,
+    "min_date": "2026-01-02",
+    "max_date": "2026-05-26",
+    "distinct_stock_count": 2540
+  },
+  "checkpoint": {
+    "securities_trader_id": "9A8F",
+    "securities_trader": "永豐金-敦南",
+    "start_date": "2026-01-01",
+    "end_date": "2026-05-26",
+    "next_date": null,
+    "last_completed_date": "2026-05-26",
+    "last_attempted_date": "2026-05-22",
+    "completed_trading_days": 92,
+    "rows_written": 577412,
+    "status": "complete",
+    "updated_at": "2026-05-27T08:31:40Z"
+  }
+}
