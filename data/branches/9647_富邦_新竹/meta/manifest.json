@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9647",
   "securities_trader": "富邦-新竹",
-  "generated_at": "2026-05-27T16:51:40Z",
+  "generated_at": "2026-05-28T17:11:02Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-05-27",
+    "end": "2026-05-28",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-05-27"
+    "max_observed_date": "2026-05-28"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9647_富邦_新竹/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9647_富邦_新竹/derived/stock_daily_agg.parquet",
-    "row_count": 122228,
+    "row_count": 123640,
     "min_date": "2026-01-02",
-    "max_date": "2026-05-27",
-    "distinct_stock_count": 2569
+    "max_date": "2026-05-28",
+    "distinct_stock_count": 2571
   },
   "checkpoint": {
     "securities_trader_id": "9647",
     "securities_trader": "富邦-新竹",
     "start_date": "2026-01-01",
-    "end_date": "2026-05-27",
+    "end_date": "2026-05-28",
     "next_date": null,
-    "last_completed_date": "2026-05-27",
-    "last_attempted_date": "2026-05-27",
-    "completed_trading_days": 93,
-    "rows_written": 748185,
+    "last_completed_date": "2026-05-28",
+    "last_attempted_date": "2026-05-28",
+    "completed_trading_days": 94,
+    "rows_written": 760821,
     "status": "complete",
-    "updated_at": "2026-05-27T16:51:40Z"
+    "updated_at": "2026-05-28T17:11:02Z"
   }
 }
