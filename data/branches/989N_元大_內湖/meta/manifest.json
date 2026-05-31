@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "989N",
   "securities_trader": "元大-內湖",
-  "generated_at": "2026-05-30T14:54:29Z",
+  "generated_at": "2026-05-31T15:04:36Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-30",
+    "end": "2026-05-31",
     "min_observed_date": "2021-07-01",
     "max_observed_date": "2026-05-29"
   },
@@ -23,7 +23,7 @@
     "securities_trader_id": "989N",
     "securities_trader": "元大-內湖",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-30",
+    "end_date": "2026-05-31",
     "next_date": "2026-05-29",
     "last_completed_date": "2026-05-29",
     "last_attempted_date": "2026-05-29",
