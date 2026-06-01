@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9661",
   "securities_trader": "富邦-新店",
-  "generated_at": "2026-05-31T15:04:35Z",
+  "generated_at": "2026-06-01T19:13:36Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-05-31",
+    "end": "2026-06-01",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-05-29"
+    "max_observed_date": "2026-06-01"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9661_富邦新店/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9661_富邦新店/derived/stock_daily_agg.parquet",
-    "row_count": 1111852,
+    "row_count": 1113278,
     "min_date": "2021-07-01",
-    "max_date": "2026-05-29",
-    "distinct_stock_count": 2796
+    "max_date": "2026-06-01",
+    "distinct_stock_count": 2799
   },
   "checkpoint": {
     "securities_trader_id": "9661",
     "securities_trader": "富邦-新店",
     "start_date": "2021-07-01",
-    "end_date": "2026-05-31",
-    "next_date": "2026-05-29",
-    "last_completed_date": "2026-05-29",
-    "last_attempted_date": "2026-05-29",
-    "completed_trading_days": 1193,
-    "rows_written": 5096432,
-    "status": "pending",
-    "updated_at": "2026-05-29T17:02:25Z"
+    "end_date": "2026-06-01",
+    "next_date": null,
+    "last_completed_date": "2026-06-01",
+    "last_attempted_date": "2026-06-01",
+    "completed_trading_days": 1194,
+    "rows_written": 5105940,
+    "status": "complete",
+    "updated_at": "2026-06-01T19:13:36Z"
   }
 }

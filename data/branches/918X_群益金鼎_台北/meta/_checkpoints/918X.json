@@ -2,12 +2,12 @@
   "securities_trader_id": "918X",
   "securities_trader": "群益金鼎-台北",
   "start_date": "2026-01-01",
-  "end_date": "2026-05-29",
+  "end_date": "2026-06-01",
   "next_date": null,
-  "last_completed_date": "2026-05-29",
-  "last_attempted_date": "2026-05-29",
-  "completed_trading_days": 95,
-  "rows_written": 113956,
+  "last_completed_date": "2026-06-01",
+  "last_attempted_date": "2026-06-01",
+  "completed_trading_days": 96,
+  "rows_written": 115494,
   "status": "complete",
-  "updated_at": "2026-05-29T17:02:09Z"
+  "updated_at": "2026-06-01T19:13:19Z"
 }
