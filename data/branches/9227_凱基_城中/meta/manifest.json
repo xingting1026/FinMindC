@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9227",
   "securities_trader": "凱基-城中",
-  "generated_at": "2026-06-01T19:13:24Z",
+  "generated_at": "2026-06-02T17:55:50Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-06-01",
+    "end": "2026-06-02",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-06-01"
+    "max_observed_date": "2026-06-02"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9227_凱基_城中/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9227_凱基_城中/derived/stock_daily_agg.parquet",
-    "row_count": 788957,
+    "row_count": 790065,
     "min_date": "2021-07-01",
-    "max_date": "2026-06-01",
+    "max_date": "2026-06-02",
     "distinct_stock_count": 2706
   },
   "checkpoint": {
     "securities_trader_id": "9227",
     "securities_trader": "凱基-城中",
     "start_date": "2021-07-01",
-    "end_date": "2026-06-01",
+    "end_date": "2026-06-02",
     "next_date": null,
-    "last_completed_date": "2026-06-01",
-    "last_attempted_date": "2026-06-01",
-    "completed_trading_days": 1194,
-    "rows_written": 3002186,
+    "last_completed_date": "2026-06-02",
+    "last_attempted_date": "2026-06-02",
+    "completed_trading_days": 1195,
+    "rows_written": 3008096,
     "status": "complete",
-    "updated_at": "2026-06-01T19:13:24Z"
+    "updated_at": "2026-06-02T17:55:50Z"
   }
 }
