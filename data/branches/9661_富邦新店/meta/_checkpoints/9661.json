@@ -2,12 +2,12 @@
   "securities_trader_id": "9661",
   "securities_trader": "富邦-新店",
   "start_date": "2021-07-01",
-  "end_date": "2026-06-04",
+  "end_date": "2026-06-05",
   "next_date": null,
-  "last_completed_date": "2026-06-04",
-  "last_attempted_date": "2026-06-04",
-  "completed_trading_days": 1197,
-  "rows_written": 5136331,
+  "last_completed_date": "2026-06-05",
+  "last_attempted_date": "2026-06-05",
+  "completed_trading_days": 1198,
+  "rows_written": 5146746,
   "status": "complete",
-  "updated_at": "2026-06-04T16:37:12Z"
+  "updated_at": "2026-06-05T16:18:50Z"
 }
