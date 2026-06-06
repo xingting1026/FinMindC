@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "920D",
   "securities_trader": "凱基-市府",
-  "generated_at": "2026-06-05T16:18:35Z",
+  "generated_at": "2026-06-06T15:01:30Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-06-05",
+    "end": "2026-06-06",
     "min_observed_date": "2026-01-02",
     "max_observed_date": "2026-06-05"
   },
@@ -23,13 +23,13 @@
     "securities_trader_id": "920D",
     "securities_trader": "凱基-市府",
     "start_date": "2026-01-01",
-    "end_date": "2026-06-05",
-    "next_date": null,
+    "end_date": "2026-06-06",
+    "next_date": "2026-06-05",
     "last_completed_date": "2026-06-05",
     "last_attempted_date": "2026-06-05",
     "completed_trading_days": 100,
     "rows_written": 281539,
-    "status": "complete",
+    "status": "pending",
     "updated_at": "2026-06-05T16:18:35Z"
   }
 }
