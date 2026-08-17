@@ -2,12 +2,12 @@
   "securities_trader_id": "9816",
   "securities_trader": "元大-新竹",
   "start_date": "2026-01-01",
-  "end_date": "2026-08-16",
+  "end_date": "2026-08-17",
   "next_date": null,
-  "last_completed_date": "2026-08-14",
-  "last_attempted_date": "2026-08-13",
-  "completed_trading_days": 149,
-  "rows_written": 686228,
+  "last_completed_date": "2026-08-17",
+  "last_attempted_date": "2026-08-17",
+  "completed_trading_days": 150,
+  "rows_written": 689718,
   "status": "complete",
-  "updated_at": "2026-08-16T15:11:13Z"
+  "updated_at": "2026-08-17T14:06:03Z"
 }
