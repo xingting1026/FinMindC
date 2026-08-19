@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9309",
   "securities_trader": "華南永昌-古亭",
-  "generated_at": "2026-08-18T14:12:57Z",
+  "generated_at": "2026-08-19T14:14:54Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-18",
+    "end": "2026-08-19",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-08-18"
+    "max_observed_date": "2026-08-19"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9309_華南永昌_古亭/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9309_華南永昌_古亭/derived/stock_daily_agg.parquet",
-    "row_count": 94130,
+    "row_count": 94648,
     "min_date": "2026-01-02",
-    "max_date": "2026-08-18",
-    "distinct_stock_count": 2313
+    "max_date": "2026-08-19",
+    "distinct_stock_count": 2315
   },
   "checkpoint": {
     "securities_trader_id": "9309",
     "securities_trader": "華南永昌-古亭",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-18",
+    "end_date": "2026-08-19",
     "next_date": null,
-    "last_completed_date": "2026-08-18",
-    "last_attempted_date": "2026-08-18",
-    "completed_trading_days": 151,
-    "rows_written": 391488,
+    "last_completed_date": "2026-08-19",
+    "last_attempted_date": "2026-08-19",
+    "completed_trading_days": 152,
+    "rows_written": 393510,
     "status": "complete",
-    "updated_at": "2026-08-18T14:12:57Z"
+    "updated_at": "2026-08-19T14:14:54Z"
   }
 }
