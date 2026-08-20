@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "980h",
   "securities_trader": "元大-台北",
-  "generated_at": "2026-08-19T14:15:12Z",
+  "generated_at": "2026-08-20T14:20:02Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-08-19",
+    "end": "2026-08-20",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-08-19"
+    "max_observed_date": "2026-08-20"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/980h_元大_台北/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/980h_元大_台北/derived/stock_daily_agg.parquet",
-    "row_count": 848419,
+    "row_count": 849213,
     "min_date": "2021-07-01",
-    "max_date": "2026-08-19",
-    "distinct_stock_count": 2815
+    "max_date": "2026-08-20",
+    "distinct_stock_count": 2816
   },
   "checkpoint": {
     "securities_trader_id": "980h",
     "securities_trader": "元大-台北",
     "start_date": "2021-07-01",
-    "end_date": "2026-08-19",
+    "end_date": "2026-08-20",
     "next_date": null,
-    "last_completed_date": "2026-08-19",
-    "last_attempted_date": "2026-08-19",
-    "completed_trading_days": 1250,
-    "rows_written": 3151834,
+    "last_completed_date": "2026-08-20",
+    "last_attempted_date": "2026-08-20",
+    "completed_trading_days": 1251,
+    "rows_written": 3155518,
     "status": "complete",
-    "updated_at": "2026-08-19T14:15:12Z"
+    "updated_at": "2026-08-20T14:20:02Z"
   }
 }
