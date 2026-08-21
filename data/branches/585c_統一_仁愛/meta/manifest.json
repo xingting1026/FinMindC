@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "585c",
   "securities_trader": "統一-仁愛",
-  "generated_at": "2026-08-20T14:19:33Z",
+  "generated_at": "2026-08-21T14:18:01Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-20",
+    "end": "2026-08-21",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-08-20"
+    "max_observed_date": "2026-08-21"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/585c_統一_仁愛/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/585c_統一_仁愛/derived/stock_daily_agg.parquet",
-    "row_count": 82819,
+    "row_count": 83232,
     "min_date": "2026-01-02",
-    "max_date": "2026-08-20",
-    "distinct_stock_count": 2098
+    "max_date": "2026-08-21",
+    "distinct_stock_count": 2101
   },
   "checkpoint": {
     "securities_trader_id": "585c",
     "securities_trader": "統一-仁愛",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-20",
+    "end_date": "2026-08-21",
     "next_date": null,
-    "last_completed_date": "2026-08-20",
-    "last_attempted_date": "2026-08-20",
-    "completed_trading_days": 153,
-    "rows_written": 356902,
+    "last_completed_date": "2026-08-21",
+    "last_attempted_date": "2026-08-21",
+    "completed_trading_days": 154,
+    "rows_written": 358500,
     "status": "complete",
-    "updated_at": "2026-08-20T14:19:33Z"
+    "updated_at": "2026-08-21T14:18:01Z"
   }
 }

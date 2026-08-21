@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "920D",
   "securities_trader": "凱基-市府",
-  "generated_at": "2026-08-20T14:19:42Z",
+  "generated_at": "2026-08-21T14:18:13Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-20",
+    "end": "2026-08-21",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-08-20"
+    "max_observed_date": "2026-08-21"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/920D_凱基_市府/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/920D_凱基_市府/derived/stock_daily_agg.parquet",
-    "row_count": 105462,
+    "row_count": 105990,
     "min_date": "2026-01-02",
-    "max_date": "2026-08-20",
-    "distinct_stock_count": 2346
+    "max_date": "2026-08-21",
+    "distinct_stock_count": 2347
   },
   "checkpoint": {
     "securities_trader_id": "920D",
     "securities_trader": "凱基-市府",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-20",
+    "end_date": "2026-08-21",
     "next_date": null,
-    "last_completed_date": "2026-08-20",
-    "last_attempted_date": "2026-08-20",
-    "completed_trading_days": 153,
-    "rows_written": 418322,
+    "last_completed_date": "2026-08-21",
+    "last_attempted_date": "2026-08-21",
+    "completed_trading_days": 154,
+    "rows_written": 420273,
     "status": "complete",
-    "updated_at": "2026-08-20T14:19:42Z"
+    "updated_at": "2026-08-21T14:18:13Z"
   }
 }

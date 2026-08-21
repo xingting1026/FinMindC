@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "779v",
   "securities_trader": "國票-台中",
-  "generated_at": "2026-08-20T14:19:37Z",
+  "generated_at": "2026-08-21T14:18:06Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-20",
+    "end": "2026-08-21",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-08-20"
+    "max_observed_date": "2026-08-21"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/779v_國票_台中/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/779v_國票_台中/derived/stock_daily_agg.parquet",
-    "row_count": 102630,
+    "row_count": 103173,
     "min_date": "2026-01-02",
-    "max_date": "2026-08-20",
-    "distinct_stock_count": 2329
+    "max_date": "2026-08-21",
+    "distinct_stock_count": 2334
   },
   "checkpoint": {
     "securities_trader_id": "779v",
     "securities_trader": "國票-台中",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-20",
+    "end_date": "2026-08-21",
     "next_date": null,
-    "last_completed_date": "2026-08-20",
-    "last_attempted_date": "2026-08-20",
-    "completed_trading_days": 153,
-    "rows_written": 404979,
+    "last_completed_date": "2026-08-21",
+    "last_attempted_date": "2026-08-21",
+    "completed_trading_days": 154,
+    "rows_written": 407008,
     "status": "complete",
-    "updated_at": "2026-08-20T14:19:37Z"
+    "updated_at": "2026-08-21T14:18:06Z"
   }
 }
