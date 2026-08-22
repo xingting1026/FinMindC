@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "9A8F",
   "securities_trader": "永豐金-敦南",
-  "generated_at": "2026-08-21T14:18:45Z",
+  "generated_at": "2026-08-22T13:57:21Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-21",
+    "end": "2026-08-22",
     "min_observed_date": "2026-01-02",
     "max_observed_date": "2026-08-21"
   },
@@ -23,13 +23,13 @@
     "securities_trader_id": "9A8F",
     "securities_trader": "永豐金-敦南",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-21",
-    "next_date": null,
+    "end_date": "2026-08-22",
+    "next_date": "2026-08-21",
     "last_completed_date": "2026-08-21",
     "last_attempted_date": "2026-08-21",
     "completed_trading_days": 154,
     "rows_written": 979616,
-    "status": "complete",
+    "status": "pending",
     "updated_at": "2026-08-21T14:18:45Z"
   }
 }
