@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "9B2E",
   "securities_trader": "台新-城中",
-  "generated_at": "2026-08-22T13:57:22Z",
+  "generated_at": "2026-08-23T13:58:20Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-22",
+    "end": "2026-08-23",
     "min_observed_date": "2026-02-02",
     "max_observed_date": "2026-08-21"
   },
@@ -23,7 +23,7 @@
     "securities_trader_id": "9B2E",
     "securities_trader": "台新-城中",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-22",
+    "end_date": "2026-08-23",
     "next_date": "2026-08-21",
     "last_completed_date": "2026-08-21",
     "last_attempted_date": "2026-08-21",
