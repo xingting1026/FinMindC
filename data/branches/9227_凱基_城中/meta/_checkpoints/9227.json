@@ -2,12 +2,12 @@
   "securities_trader_id": "9227",
   "securities_trader": "凱基-城中",
   "start_date": "2021-07-01",
-  "end_date": "2026-08-21",
+  "end_date": "2026-08-24",
   "next_date": null,
-  "last_completed_date": "2026-08-21",
-  "last_attempted_date": "2026-08-21",
-  "completed_trading_days": 1252,
-  "rows_written": 3243303,
+  "last_completed_date": "2026-08-24",
+  "last_attempted_date": "2026-08-24",
+  "completed_trading_days": 1253,
+  "rows_written": 3246292,
   "status": "complete",
-  "updated_at": "2026-08-21T14:18:17Z"
+  "updated_at": "2026-08-24T14:24:09Z"
 }

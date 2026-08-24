@@ -2,12 +2,12 @@
   "securities_trader_id": "918W",
   "securities_trader": "群益金鼎-忠孝",
   "start_date": "2026-01-01",
-  "end_date": "2026-08-21",
+  "end_date": "2026-08-24",
   "next_date": null,
-  "last_completed_date": "2026-08-21",
-  "last_attempted_date": "2026-08-21",
-  "completed_trading_days": 154,
-  "rows_written": 408458,
+  "last_completed_date": "2026-08-24",
+  "last_attempted_date": "2026-08-24",
+  "completed_trading_days": 155,
+  "rows_written": 410268,
   "status": "complete",
-  "updated_at": "2026-08-21T14:18:10Z"
+  "updated_at": "2026-08-24T14:24:03Z"
 }
