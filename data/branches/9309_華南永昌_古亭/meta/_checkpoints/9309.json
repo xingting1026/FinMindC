@@ -2,12 +2,12 @@
   "securities_trader_id": "9309",
   "securities_trader": "華南永昌-古亭",
   "start_date": "2026-01-01",
-  "end_date": "2026-08-27",
+  "end_date": "2026-08-28",
   "next_date": null,
-  "last_completed_date": "2026-08-27",
-  "last_attempted_date": "2026-08-27",
-  "completed_trading_days": 158,
-  "rows_written": 404983,
+  "last_completed_date": "2026-08-28",
+  "last_attempted_date": "2026-08-28",
+  "completed_trading_days": 159,
+  "rows_written": 407357,
   "status": "complete",
-  "updated_at": "2026-08-27T23:04:12Z"
+  "updated_at": "2026-08-28T23:12:52Z"
 }
