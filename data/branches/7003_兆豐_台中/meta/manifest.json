@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "7003",
   "securities_trader": "兆豐-台中",
-  "generated_at": "2026-08-28T23:12:40Z",
+  "generated_at": "2026-08-29T17:22:26Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-28",
+    "end": "2026-08-29",
     "min_observed_date": "2026-01-02",
     "max_observed_date": "2026-08-28"
   },
@@ -23,13 +23,13 @@
     "securities_trader_id": "7003",
     "securities_trader": "兆豐-台中",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-28",
-    "next_date": null,
+    "end_date": "2026-08-29",
+    "next_date": "2026-08-28",
     "last_completed_date": "2026-08-28",
     "last_attempted_date": "2026-08-28",
     "completed_trading_days": 159,
     "rows_written": 495933,
-    "status": "complete",
+    "status": "pending",
     "updated_at": "2026-08-28T23:12:40Z"
   }
 }
