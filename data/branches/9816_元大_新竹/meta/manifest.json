@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "9816",
   "securities_trader": "元大-新竹",
-  "generated_at": "2026-08-29T17:22:29Z",
+  "generated_at": "2026-08-30T17:45:30Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-08-29",
+    "end": "2026-08-30",
     "min_observed_date": "2026-01-02",
     "max_observed_date": "2026-08-28"
   },
@@ -23,7 +23,7 @@
     "securities_trader_id": "9816",
     "securities_trader": "元大-新竹",
     "start_date": "2026-01-01",
-    "end_date": "2026-08-29",
+    "end_date": "2026-08-30",
     "next_date": "2026-08-28",
     "last_completed_date": "2026-08-28",
     "last_attempted_date": "2026-08-28",
