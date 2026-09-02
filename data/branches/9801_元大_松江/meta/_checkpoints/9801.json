@@ -2,12 +2,12 @@
   "securities_trader_id": "9801",
   "securities_trader": "元大-松江",
   "start_date": "2026-01-01",
-  "end_date": "2026-09-01",
+  "end_date": "2026-09-02",
   "next_date": null,
-  "last_completed_date": "2026-09-01",
-  "last_attempted_date": "2026-09-01",
-  "completed_trading_days": 161,
-  "rows_written": 636207,
+  "last_completed_date": "2026-09-02",
+  "last_attempted_date": "2026-09-02",
+  "completed_trading_days": 162,
+  "rows_written": 639442,
   "status": "complete",
-  "updated_at": "2026-09-01T17:28:06Z"
+  "updated_at": "2026-09-02T17:20:31Z"
 }
