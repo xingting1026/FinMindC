@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "1230",
   "securities_trader": "彰銀",
-  "generated_at": "2026-09-02T17:20:03Z",
+  "generated_at": "2026-09-03T17:11:33Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-02",
+    "end": "2026-09-03",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-09-02"
+    "max_observed_date": "2026-09-03"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/1230_彰銀/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/1230_彰銀/derived/stock_daily_agg.parquet",
-    "row_count": 89575,
+    "row_count": 90084,
     "min_date": "2026-01-02",
-    "max_date": "2026-09-02",
-    "distinct_stock_count": 2220
+    "max_date": "2026-09-03",
+    "distinct_stock_count": 2221
   },
   "checkpoint": {
     "securities_trader_id": "1230",
     "securities_trader": "彰銀",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-02",
+    "end_date": "2026-09-03",
     "next_date": null,
-    "last_completed_date": "2026-09-02",
-    "last_attempted_date": "2026-09-02",
-    "completed_trading_days": 162,
-    "rows_written": 326129,
+    "last_completed_date": "2026-09-03",
+    "last_attempted_date": "2026-09-03",
+    "completed_trading_days": 163,
+    "rows_written": 328347,
     "status": "complete",
-    "updated_at": "2026-09-02T17:20:03Z"
+    "updated_at": "2026-09-03T17:11:33Z"
   }
 }

@@ -2,12 +2,12 @@
   "securities_trader_id": "980h",
   "securities_trader": "元大-台北",
   "start_date": "2021-07-01",
-  "end_date": "2026-09-02",
+  "end_date": "2026-09-03",
   "next_date": null,
-  "last_completed_date": "2026-09-02",
-  "last_attempted_date": "2026-09-02",
-  "completed_trading_days": 1260,
-  "rows_written": 3192745,
+  "last_completed_date": "2026-09-03",
+  "last_attempted_date": "2026-09-03",
+  "completed_trading_days": 1261,
+  "rows_written": 3197929,
   "status": "complete",
-  "updated_at": "2026-09-02T17:20:35Z"
+  "updated_at": "2026-09-03T17:12:11Z"
 }

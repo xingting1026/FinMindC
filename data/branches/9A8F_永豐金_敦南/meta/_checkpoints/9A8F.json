@@ -2,12 +2,12 @@
   "securities_trader_id": "9A8F",
   "securities_trader": "永豐金-敦南",
   "start_date": "2026-01-01",
-  "end_date": "2026-09-02",
+  "end_date": "2026-09-03",
   "next_date": null,
-  "last_completed_date": "2026-09-02",
-  "last_attempted_date": "2026-09-02",
-  "completed_trading_days": 162,
-  "rows_written": 1022836,
+  "last_completed_date": "2026-09-03",
+  "last_attempted_date": "2026-09-03",
+  "completed_trading_days": 163,
+  "rows_written": 1029799,
   "status": "complete",
-  "updated_at": "2026-09-02T17:20:44Z"
+  "updated_at": "2026-09-03T17:12:22Z"
 }
