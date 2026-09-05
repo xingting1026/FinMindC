@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "9B2D",
   "securities_trader": "台新-大昌",
-  "generated_at": "2026-09-04T17:05:08Z",
+  "generated_at": "2026-09-05T16:14:54Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-04",
+    "end": "2026-09-05",
     "min_observed_date": "2026-02-02",
     "max_observed_date": "2026-09-04"
   },
@@ -23,13 +23,13 @@
     "securities_trader_id": "9B2D",
     "securities_trader": "台新-大昌",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-04",
-    "next_date": null,
+    "end_date": "2026-09-05",
+    "next_date": "2026-09-04",
     "last_completed_date": "2026-09-04",
     "last_attempted_date": "2026-09-04",
     "completed_trading_days": 164,
     "rows_written": 569713,
-    "status": "complete",
+    "status": "pending",
     "updated_at": "2026-09-04T17:05:08Z"
   }
 }
