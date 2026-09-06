@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "9667",
   "securities_trader": "富邦-台南",
-  "generated_at": "2026-09-05T16:14:52Z",
+  "generated_at": "2026-09-06T16:25:57Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-05",
+    "end": "2026-09-06",
     "min_observed_date": "2026-01-02",
     "max_observed_date": "2026-09-04"
   },
@@ -23,7 +23,7 @@
     "securities_trader_id": "9667",
     "securities_trader": "富邦-台南",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-05",
+    "end_date": "2026-09-06",
     "next_date": "2026-09-04",
     "last_completed_date": "2026-09-04",
     "last_attempted_date": "2026-09-04",
