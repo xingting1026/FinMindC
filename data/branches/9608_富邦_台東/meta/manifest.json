@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9608",
   "securities_trader": "富邦-台東",
-  "generated_at": "2026-09-10T17:11:03Z",
+  "generated_at": "2026-09-11T17:12:12Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-10",
+    "end": "2026-09-11",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-09-10"
+    "max_observed_date": "2026-09-11"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9608_富邦_台東/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9608_富邦_台東/derived/stock_daily_agg.parquet",
-    "row_count": 98103,
+    "row_count": 98590,
     "min_date": "2026-01-02",
-    "max_date": "2026-09-10",
-    "distinct_stock_count": 2244
+    "max_date": "2026-09-11",
+    "distinct_stock_count": 2246
   },
   "checkpoint": {
     "securities_trader_id": "9608",
     "securities_trader": "富邦-台東",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-10",
+    "end_date": "2026-09-11",
     "next_date": null,
-    "last_completed_date": "2026-09-10",
-    "last_attempted_date": "2026-09-10",
-    "completed_trading_days": 168,
-    "rows_written": 357354,
+    "last_completed_date": "2026-09-11",
+    "last_attempted_date": "2026-09-11",
+    "completed_trading_days": 169,
+    "rows_written": 359147,
     "status": "complete",
-    "updated_at": "2026-09-10T17:11:03Z"
+    "updated_at": "2026-09-11T17:12:12Z"
   }
 }

@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "918X",
   "securities_trader": "群益金鼎-台北",
-  "generated_at": "2026-09-10T17:10:54Z",
+  "generated_at": "2026-09-11T17:12:02Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-10",
+    "end": "2026-09-11",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-09-10"
+    "max_observed_date": "2026-09-11"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/918X_群益金鼎_台北/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/918X_群益金鼎_台北/derived/stock_daily_agg.parquet",
-    "row_count": 62176,
+    "row_count": 62513,
     "min_date": "2026-01-02",
-    "max_date": "2026-09-10",
+    "max_date": "2026-09-11",
     "distinct_stock_count": 2047
   },
   "checkpoint": {
     "securities_trader_id": "918X",
     "securities_trader": "群益金鼎-台北",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-10",
+    "end_date": "2026-09-11",
     "next_date": null,
-    "last_completed_date": "2026-09-10",
-    "last_attempted_date": "2026-09-10",
-    "completed_trading_days": 168,
-    "rows_written": 200607,
+    "last_completed_date": "2026-09-11",
+    "last_attempted_date": "2026-09-11",
+    "completed_trading_days": 169,
+    "rows_written": 201606,
     "status": "complete",
-    "updated_at": "2026-09-10T17:10:54Z"
+    "updated_at": "2026-09-11T17:12:02Z"
   }
 }
