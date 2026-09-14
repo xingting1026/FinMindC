@@ -2,12 +2,12 @@
   "securities_trader_id": "111E",
   "securities_trader": "臺灣企銀-桃園",
   "start_date": "2026-01-01",
-  "end_date": "2026-09-11",
+  "end_date": "2026-09-14",
   "next_date": null,
-  "last_completed_date": "2026-09-11",
-  "last_attempted_date": "2026-09-11",
-  "completed_trading_days": 169,
-  "rows_written": 294327,
+  "last_completed_date": "2026-09-14",
+  "last_attempted_date": "2026-09-14",
+  "completed_trading_days": 170,
+  "rows_written": 295600,
   "status": "complete",
-  "updated_at": "2026-09-11T17:11:48Z"
+  "updated_at": "2026-09-14T18:52:53Z"
 }
