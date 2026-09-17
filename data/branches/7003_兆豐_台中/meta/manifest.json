@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "7003",
   "securities_trader": "兆豐-台中",
-  "generated_at": "2026-09-16T17:44:49Z",
+  "generated_at": "2026-09-17T17:45:02Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-16",
+    "end": "2026-09-17",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-09-16"
+    "max_observed_date": "2026-09-17"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/7003_兆豐_台中/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/7003_兆豐_台中/derived/stock_daily_agg.parquet",
-    "row_count": 126375,
+    "row_count": 126960,
     "min_date": "2026-01-02",
-    "max_date": "2026-09-16",
-    "distinct_stock_count": 2441
+    "max_date": "2026-09-17",
+    "distinct_stock_count": 2442
   },
   "checkpoint": {
     "securities_trader_id": "7003",
     "securities_trader": "兆豐-台中",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-16",
+    "end_date": "2026-09-17",
     "next_date": null,
-    "last_completed_date": "2026-09-16",
-    "last_attempted_date": "2026-09-16",
-    "completed_trading_days": 172,
-    "rows_written": 527871,
+    "last_completed_date": "2026-09-17",
+    "last_attempted_date": "2026-09-17",
+    "completed_trading_days": 173,
+    "rows_written": 530313,
     "status": "complete",
-    "updated_at": "2026-09-16T17:44:49Z"
+    "updated_at": "2026-09-17T17:45:02Z"
   }
 }
