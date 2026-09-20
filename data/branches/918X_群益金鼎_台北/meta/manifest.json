@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "918X",
   "securities_trader": "群益金鼎-台北",
-  "generated_at": "2026-09-19T16:47:12Z",
+  "generated_at": "2026-09-20T16:58:25Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-19",
+    "end": "2026-09-20",
     "min_observed_date": "2026-01-02",
     "max_observed_date": "2026-09-18"
   },
@@ -23,7 +23,7 @@
     "securities_trader_id": "918X",
     "securities_trader": "群益金鼎-台北",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-19",
+    "end_date": "2026-09-20",
     "next_date": "2026-09-18",
     "last_completed_date": "2026-09-18",
     "last_attempted_date": "2026-09-18",
