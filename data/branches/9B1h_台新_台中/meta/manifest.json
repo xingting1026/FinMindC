@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9B1h",
   "securities_trader": "台新-台中",
-  "generated_at": "2026-09-20T16:58:29Z",
+  "generated_at": "2026-09-21T18:55:31Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-20",
+    "end": "2026-09-21",
     "min_observed_date": "2026-04-07",
-    "max_observed_date": "2026-09-18"
+    "max_observed_date": "2026-09-21"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9B1h_台新_台中/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9B1h_台新_台中/derived/stock_daily_agg.parquet",
-    "row_count": 156873,
+    "row_count": 158050,
     "min_date": "2026-04-07",
-    "max_date": "2026-09-18",
-    "distinct_stock_count": 2675
+    "max_date": "2026-09-21",
+    "distinct_stock_count": 2676
   },
   "checkpoint": {
     "securities_trader_id": "9B1h",
     "securities_trader": "台新-台中",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-20",
-    "next_date": "2026-09-18",
-    "last_completed_date": "2026-09-18",
-    "last_attempted_date": "2026-09-18",
-    "completed_trading_days": 174,
-    "rows_written": 1104032,
-    "status": "pending",
-    "updated_at": "2026-09-18T17:12:53Z"
+    "end_date": "2026-09-21",
+    "next_date": null,
+    "last_completed_date": "2026-09-21",
+    "last_attempted_date": "2026-09-21",
+    "completed_trading_days": 175,
+    "rows_written": 1110994,
+    "status": "complete",
+    "updated_at": "2026-09-21T18:55:31Z"
   }
 }
