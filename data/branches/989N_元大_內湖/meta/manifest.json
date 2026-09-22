@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "989N",
   "securities_trader": "元大-內湖",
-  "generated_at": "2026-09-21T18:55:26Z",
+  "generated_at": "2026-09-22T17:46:34Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-09-21",
+    "end": "2026-09-22",
     "min_observed_date": "2021-07-01",
-    "max_observed_date": "2026-09-21"
+    "max_observed_date": "2026-09-22"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/989N_元大_內湖/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/989N_元大_內湖/derived/stock_daily_agg.parquet",
-    "row_count": 1087773,
+    "row_count": 1088807,
     "min_date": "2021-07-01",
-    "max_date": "2026-09-21",
+    "max_date": "2026-09-22",
     "distinct_stock_count": 2822
   },
   "checkpoint": {
     "securities_trader_id": "989N",
     "securities_trader": "元大-內湖",
     "start_date": "2021-07-01",
-    "end_date": "2026-09-21",
+    "end_date": "2026-09-22",
     "next_date": null,
-    "last_completed_date": "2026-09-21",
-    "last_attempted_date": "2026-09-21",
-    "completed_trading_days": 1273,
-    "rows_written": 4630896,
+    "last_completed_date": "2026-09-22",
+    "last_attempted_date": "2026-09-22",
+    "completed_trading_days": 1274,
+    "rows_written": 4636236,
     "status": "complete",
-    "updated_at": "2026-09-21T18:55:26Z"
+    "updated_at": "2026-09-22T17:46:34Z"
   }
 }
