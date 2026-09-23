@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "8565",
   "securities_trader": "新光-桃園",
-  "generated_at": "2026-09-22T17:46:06Z",
+  "generated_at": "2026-09-23T17:58:30Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-22",
+    "end": "2026-09-23",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-09-22"
+    "max_observed_date": "2026-09-23"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/8565_新光_桃園/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/8565_新光_桃園/derived/stock_daily_agg.parquet",
-    "row_count": 206029,
+    "row_count": 207081,
     "min_date": "2026-01-02",
-    "max_date": "2026-09-22",
-    "distinct_stock_count": 2635
+    "max_date": "2026-09-23",
+    "distinct_stock_count": 2636
   },
   "checkpoint": {
     "securities_trader_id": "8565",
     "securities_trader": "新光-桃園",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-22",
+    "end_date": "2026-09-23",
     "next_date": null,
-    "last_completed_date": "2026-09-22",
-    "last_attempted_date": "2026-09-22",
-    "completed_trading_days": 176,
-    "rows_written": 1255661,
+    "last_completed_date": "2026-09-23",
+    "last_attempted_date": "2026-09-23",
+    "completed_trading_days": 177,
+    "rows_written": 1261180,
     "status": "complete",
-    "updated_at": "2026-09-22T17:46:06Z"
+    "updated_at": "2026-09-23T17:58:30Z"
   }
 }
