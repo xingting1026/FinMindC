@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9801",
   "securities_trader": "元大-松江",
-  "generated_at": "2026-09-23T17:58:49Z",
+  "generated_at": "2026-09-24T17:57:58Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-09-23",
+    "end": "2026-09-24",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-09-23"
+    "max_observed_date": "2026-09-24"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9801_元大_松江/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9801_元大_松江/derived/stock_daily_agg.parquet",
-    "row_count": 143669,
+    "row_count": 144337,
     "min_date": "2026-01-02",
-    "max_date": "2026-09-23",
-    "distinct_stock_count": 2603
+    "max_date": "2026-09-24",
+    "distinct_stock_count": 2604
   },
   "checkpoint": {
     "securities_trader_id": "9801",
     "securities_trader": "元大-松江",
     "start_date": "2026-01-01",
-    "end_date": "2026-09-23",
+    "end_date": "2026-09-24",
     "next_date": null,
-    "last_completed_date": "2026-09-23",
-    "last_attempted_date": "2026-09-23",
-    "completed_trading_days": 177,
-    "rows_written": 686271,
+    "last_completed_date": "2026-09-24",
+    "last_attempted_date": "2026-09-24",
+    "completed_trading_days": 178,
+    "rows_written": 689048,
     "status": "complete",
-    "updated_at": "2026-09-23T17:58:49Z"
+    "updated_at": "2026-09-24T17:57:58Z"
   }
 }
