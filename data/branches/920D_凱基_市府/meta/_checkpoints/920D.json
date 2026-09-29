@@ -2,12 +2,12 @@
   "securities_trader_id": "920D",
   "securities_trader": "凱基-市府",
   "start_date": "2026-01-01",
-  "end_date": "2026-09-24",
+  "end_date": "2026-09-29",
   "next_date": null,
-  "last_completed_date": "2026-09-24",
-  "last_attempted_date": "2026-09-24",
-  "completed_trading_days": 178,
-  "rows_written": 471718,
+  "last_completed_date": "2026-09-29",
+  "last_attempted_date": "2026-09-29",
+  "completed_trading_days": 179,
+  "rows_written": 473754,
   "status": "complete",
-  "updated_at": "2026-09-24T17:57:38Z"
+  "updated_at": "2026-09-29T18:52:04Z"
 }
