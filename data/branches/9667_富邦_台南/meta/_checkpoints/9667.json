@@ -2,12 +2,12 @@
   "securities_trader_id": "9667",
   "securities_trader": "富邦-台南",
   "start_date": "2026-01-01",
-  "end_date": "2026-10-05",
+  "end_date": "2026-10-06",
   "next_date": null,
-  "last_completed_date": "2026-10-05",
-  "last_attempted_date": "2026-10-05",
-  "completed_trading_days": 183,
-  "rows_written": 1203084,
+  "last_completed_date": "2026-10-06",
+  "last_attempted_date": "2026-10-06",
+  "completed_trading_days": 184,
+  "rows_written": 1209046,
   "status": "complete",
-  "updated_at": "2026-10-05T21:25:15Z"
+  "updated_at": "2026-10-06T19:03:18Z"
 }
