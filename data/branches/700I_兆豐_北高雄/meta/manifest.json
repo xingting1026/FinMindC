@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "700I",
   "securities_trader": "兆豐-北高雄",
-  "generated_at": "2026-10-06T19:02:49Z",
+  "generated_at": "2026-10-07T19:31:21Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-10-06",
+    "end": "2026-10-07",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-10-06"
+    "max_observed_date": "2026-10-07"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/700I_兆豐_北高雄/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/700I_兆豐_北高雄/derived/stock_daily_agg.parquet",
-    "row_count": 146303,
+    "row_count": 147080,
     "min_date": "2026-01-02",
-    "max_date": "2026-10-06",
-    "distinct_stock_count": 2461
+    "max_date": "2026-10-07",
+    "distinct_stock_count": 2464
   },
   "checkpoint": {
     "securities_trader_id": "700I",
     "securities_trader": "兆豐-北高雄",
     "start_date": "2026-01-01",
-    "end_date": "2026-10-06",
+    "end_date": "2026-10-07",
     "next_date": null,
-    "last_completed_date": "2026-10-06",
-    "last_attempted_date": "2026-10-06",
-    "completed_trading_days": 184,
-    "rows_written": 643845,
+    "last_completed_date": "2026-10-07",
+    "last_attempted_date": "2026-10-07",
+    "completed_trading_days": 185,
+    "rows_written": 647051,
     "status": "complete",
-    "updated_at": "2026-10-06T19:02:49Z"
+    "updated_at": "2026-10-07T19:31:21Z"
   }
 }
