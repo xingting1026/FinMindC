@@ -2,12 +2,12 @@
   "securities_trader_id": "585c",
   "securities_trader": "統一-仁愛",
   "start_date": "2026-01-01",
-  "end_date": "2026-10-13",
+  "end_date": "2026-10-14",
   "next_date": null,
-  "last_completed_date": "2026-10-13",
-  "last_attempted_date": "2026-10-13",
-  "completed_trading_days": 188,
-  "rows_written": 425412,
+  "last_completed_date": "2026-10-14",
+  "last_attempted_date": "2026-10-14",
+  "completed_trading_days": 189,
+  "rows_written": 427423,
   "status": "complete",
-  "updated_at": "2026-10-13T19:58:14Z"
+  "updated_at": "2026-10-14T18:10:40Z"
 }
