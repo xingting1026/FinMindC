@@ -2,12 +2,12 @@
   "securities_trader_id": "779v",
   "securities_trader": "國票-台中",
   "start_date": "2026-01-01",
-  "end_date": "2026-10-14",
+  "end_date": "2026-10-15",
   "next_date": null,
-  "last_completed_date": "2026-10-14",
-  "last_attempted_date": "2026-10-14",
-  "completed_trading_days": 189,
-  "rows_written": 484677,
+  "last_completed_date": "2026-10-15",
+  "last_attempted_date": "2026-10-15",
+  "completed_trading_days": 190,
+  "rows_written": 487544,
   "status": "complete",
-  "updated_at": "2026-10-14T18:10:46Z"
+  "updated_at": "2026-10-15T17:53:42Z"
 }
