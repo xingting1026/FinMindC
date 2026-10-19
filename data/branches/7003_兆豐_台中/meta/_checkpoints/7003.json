@@ -2,12 +2,12 @@
   "securities_trader_id": "7003",
   "securities_trader": "兆豐-台中",
   "start_date": "2026-01-01",
-  "end_date": "2026-10-16",
+  "end_date": "2026-10-19",
   "next_date": null,
-  "last_completed_date": "2026-10-16",
-  "last_attempted_date": "2026-10-16",
-  "completed_trading_days": 191,
-  "rows_written": 578499,
+  "last_completed_date": "2026-10-19",
+  "last_attempted_date": "2026-10-19",
+  "completed_trading_days": 192,
+  "rows_written": 581400,
   "status": "complete",
-  "updated_at": "2026-10-16T17:42:08Z"
+  "updated_at": "2026-10-19T19:28:42Z"
 }
