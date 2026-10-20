@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "918W",
   "securities_trader": "群益金鼎-忠孝",
-  "generated_at": "2026-10-19T19:28:50Z",
+  "generated_at": "2026-10-20T18:07:24Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-10-19",
+    "end": "2026-10-20",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-10-19"
+    "max_observed_date": "2026-10-20"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/918W_群益金鼎_忠孝/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/918W_群益金鼎_忠孝/derived/stock_daily_agg.parquet",
-    "row_count": 119410,
+    "row_count": 119913,
     "min_date": "2026-01-02",
-    "max_date": "2026-10-19",
-    "distinct_stock_count": 2331
+    "max_date": "2026-10-20",
+    "distinct_stock_count": 2332
   },
   "checkpoint": {
     "securities_trader_id": "918W",
     "securities_trader": "群益金鼎-忠孝",
     "start_date": "2026-01-01",
-    "end_date": "2026-10-19",
+    "end_date": "2026-10-20",
     "next_date": null,
-    "last_completed_date": "2026-10-19",
-    "last_attempted_date": "2026-10-19",
-    "completed_trading_days": 192,
-    "rows_written": 488361,
+    "last_completed_date": "2026-10-20",
+    "last_attempted_date": "2026-10-20",
+    "completed_trading_days": 193,
+    "rows_written": 490596,
     "status": "complete",
-    "updated_at": "2026-10-19T19:28:50Z"
+    "updated_at": "2026-10-20T18:07:24Z"
   }
 }
