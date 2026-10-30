@@ -2,12 +2,12 @@
   "securities_trader_id": "989N",
   "securities_trader": "元大-內湖",
   "start_date": "2021-07-01",
-  "end_date": "2026-10-29",
+  "end_date": "2026-10-30",
   "next_date": null,
-  "last_completed_date": "2026-10-29",
-  "last_attempted_date": "2026-10-29",
-  "completed_trading_days": 1297,
-  "rows_written": 4748973,
+  "last_completed_date": "2026-10-30",
+  "last_attempted_date": "2026-10-30",
+  "completed_trading_days": 1298,
+  "rows_written": 4754348,
   "status": "complete",
-  "updated_at": "2026-10-29T19:13:24Z"
+  "updated_at": "2026-10-30T18:50:41Z"
 }
