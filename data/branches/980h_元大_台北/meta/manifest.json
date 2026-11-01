@@ -1,10 +1,10 @@
 {
   "securities_trader_id": "980h",
   "securities_trader": "元大-台北",
-  "generated_at": "2026-10-31T17:55:49Z",
+  "generated_at": "2026-11-01T18:32:47Z",
   "date_range": {
     "start": "2021-07-01",
-    "end": "2026-10-31",
+    "end": "2026-11-01",
     "min_observed_date": "2021-07-01",
     "max_observed_date": "2026-10-30"
   },
@@ -23,7 +23,7 @@
     "securities_trader_id": "980h",
     "securities_trader": "元大-台北",
     "start_date": "2021-07-01",
-    "end_date": "2026-10-31",
+    "end_date": "2026-11-01",
     "next_date": "2026-10-30",
     "last_completed_date": "2026-10-30",
     "last_attempted_date": "2026-10-30",
