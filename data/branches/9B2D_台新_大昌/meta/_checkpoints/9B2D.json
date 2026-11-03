@@ -2,12 +2,12 @@
   "securities_trader_id": "9B2D",
   "securities_trader": "台新-大昌",
   "start_date": "2026-01-01",
-  "end_date": "2026-11-02",
+  "end_date": "2026-11-03",
   "next_date": null,
-  "last_completed_date": "2026-11-02",
-  "last_attempted_date": "2026-11-02",
-  "completed_trading_days": 201,
-  "rows_written": 685709,
+  "last_completed_date": "2026-11-03",
+  "last_attempted_date": "2026-11-03",
+  "completed_trading_days": 202,
+  "rows_written": 690461,
   "status": "complete",
-  "updated_at": "2026-11-02T22:29:27Z"
+  "updated_at": "2026-11-03T20:19:55Z"
 }
