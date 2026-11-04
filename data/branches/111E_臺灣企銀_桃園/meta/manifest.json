@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "111E",
   "securities_trader": "臺灣企銀-桃園",
-  "generated_at": "2026-11-03T20:19:06Z",
+  "generated_at": "2026-11-04T20:33:04Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-11-03",
+    "end": "2026-11-04",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-11-03"
+    "max_observed_date": "2026-11-04"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/111E_臺灣企銀_桃園/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/111E_臺灣企銀_桃園/derived/stock_daily_agg.parquet",
-    "row_count": 99080,
+    "row_count": 99506,
     "min_date": "2026-01-02",
-    "max_date": "2026-11-03",
-    "distinct_stock_count": 2164
+    "max_date": "2026-11-04",
+    "distinct_stock_count": 2165
   },
   "checkpoint": {
     "securities_trader_id": "111E",
     "securities_trader": "臺灣企銀-桃園",
     "start_date": "2026-01-01",
-    "end_date": "2026-11-03",
+    "end_date": "2026-11-04",
     "next_date": null,
-    "last_completed_date": "2026-11-03",
-    "last_attempted_date": "2026-11-03",
-    "completed_trading_days": 202,
-    "rows_written": 342181,
+    "last_completed_date": "2026-11-04",
+    "last_attempted_date": "2026-11-04",
+    "completed_trading_days": 203,
+    "rows_written": 344101,
     "status": "complete",
-    "updated_at": "2026-11-03T20:19:06Z"
+    "updated_at": "2026-11-04T20:33:04Z"
   }
 }
