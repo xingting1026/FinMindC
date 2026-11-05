@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9359",
   "securities_trader": "華南永昌-中正",
-  "generated_at": "2026-11-04T20:33:24Z",
+  "generated_at": "2026-11-05T20:50:17Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-11-04",
+    "end": "2026-11-05",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-11-04"
+    "max_observed_date": "2026-11-05"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9359_華南永昌_中正/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9359_華南永昌_中正/derived/stock_daily_agg.parquet",
-    "row_count": 163230,
+    "row_count": 164004,
     "min_date": "2026-01-02",
-    "max_date": "2026-11-04",
-    "distinct_stock_count": 2558
+    "max_date": "2026-11-05",
+    "distinct_stock_count": 2559
   },
   "checkpoint": {
     "securities_trader_id": "9359",
     "securities_trader": "華南永昌-中正",
     "start_date": "2026-01-01",
-    "end_date": "2026-11-04",
+    "end_date": "2026-11-05",
     "next_date": null,
-    "last_completed_date": "2026-11-04",
-    "last_attempted_date": "2026-11-04",
-    "completed_trading_days": 203,
-    "rows_written": 751670,
+    "last_completed_date": "2026-11-05",
+    "last_attempted_date": "2026-11-05",
+    "completed_trading_days": 204,
+    "rows_written": 755568,
     "status": "complete",
-    "updated_at": "2026-11-04T20:33:24Z"
+    "updated_at": "2026-11-05T20:50:17Z"
   }
 }
