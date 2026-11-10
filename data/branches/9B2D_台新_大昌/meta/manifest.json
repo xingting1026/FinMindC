@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9B2D",
   "securities_trader": "台新-大昌",
-  "generated_at": "2026-11-09T23:10:05Z",
+  "generated_at": "2026-11-10T20:37:36Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-11-09",
+    "end": "2026-11-10",
     "min_observed_date": "2026-02-02",
-    "max_observed_date": "2026-11-09"
+    "max_observed_date": "2026-11-10"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9B2D_台新_大昌/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9B2D_台新_大昌/derived/stock_daily_agg.parquet",
-    "row_count": 157002,
+    "row_count": 157768,
     "min_date": "2026-02-02",
-    "max_date": "2026-11-09",
-    "distinct_stock_count": 2520
+    "max_date": "2026-11-10",
+    "distinct_stock_count": 2524
   },
   "checkpoint": {
     "securities_trader_id": "9B2D",
     "securities_trader": "台新-大昌",
     "start_date": "2026-01-01",
-    "end_date": "2026-11-09",
+    "end_date": "2026-11-10",
     "next_date": null,
-    "last_completed_date": "2026-11-09",
-    "last_attempted_date": "2026-11-09",
-    "completed_trading_days": 206,
-    "rows_written": 706789,
+    "last_completed_date": "2026-11-10",
+    "last_attempted_date": "2026-11-10",
+    "completed_trading_days": 207,
+    "rows_written": 710224,
     "status": "complete",
-    "updated_at": "2026-11-09T23:10:05Z"
+    "updated_at": "2026-11-10T20:37:36Z"
   }
 }

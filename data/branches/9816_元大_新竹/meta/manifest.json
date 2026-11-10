@@ -1,12 +1,12 @@
 {
   "securities_trader_id": "9816",
   "securities_trader": "元大-新竹",
-  "generated_at": "2026-11-09T23:09:57Z",
+  "generated_at": "2026-11-10T20:37:26Z",
   "date_range": {
     "start": "2026-01-01",
-    "end": "2026-11-09",
+    "end": "2026-11-10",
     "min_observed_date": "2026-01-02",
-    "max_observed_date": "2026-11-09"
+    "max_observed_date": "2026-11-10"
   },
   "raw": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9816_元大_新竹/raw/trading_daily_detail.parquet",
@@ -14,22 +14,22 @@
   },
   "derived": {
     "path": "/home/runner/work/FinMindC/FinMindC/data/branches/9816_元大_新竹/derived/stock_daily_agg.parquet",
-    "row_count": 174935,
+    "row_count": 175700,
     "min_date": "2026-01-02",
-    "max_date": "2026-11-09",
+    "max_date": "2026-11-10",
     "distinct_stock_count": 2539
   },
   "checkpoint": {
     "securities_trader_id": "9816",
     "securities_trader": "元大-新竹",
     "start_date": "2026-01-01",
-    "end_date": "2026-11-09",
+    "end_date": "2026-11-10",
     "next_date": null,
-    "last_completed_date": "2026-11-09",
-    "last_attempted_date": "2026-11-09",
-    "completed_trading_days": 206,
-    "rows_written": 902993,
+    "last_completed_date": "2026-11-10",
+    "last_attempted_date": "2026-11-10",
+    "completed_trading_days": 207,
+    "rows_written": 906994,
     "status": "complete",
-    "updated_at": "2026-11-09T23:09:57Z"
+    "updated_at": "2026-11-10T20:37:26Z"
   }
 }
