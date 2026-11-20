@@ -2,12 +2,12 @@
   "securities_trader_id": "8565",
   "securities_trader": "新光-桃園",
   "start_date": "2026-01-01",
-  "end_date": "2026-11-19",
+  "end_date": "2026-11-20",
   "next_date": null,
-  "last_completed_date": "2026-11-19",
-  "last_attempted_date": "2026-11-19",
-  "completed_trading_days": 214,
-  "rows_written": 1497138,
+  "last_completed_date": "2026-11-20",
+  "last_attempted_date": "2026-11-20",
+  "completed_trading_days": 215,
+  "rows_written": 1504107,
   "status": "complete",
-  "updated_at": "2026-11-19T21:48:03Z"
+  "updated_at": "2026-11-20T21:32:23Z"
 }
