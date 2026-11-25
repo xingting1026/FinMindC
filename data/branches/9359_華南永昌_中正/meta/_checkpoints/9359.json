@@ -2,12 +2,12 @@
   "securities_trader_id": "9359",
   "securities_trader": "華南永昌-中正",
   "start_date": "2026-01-01",
-  "end_date": "2026-11-24",
+  "end_date": "2026-11-25",
   "next_date": null,
-  "last_completed_date": "2026-11-24",
-  "last_attempted_date": "2026-11-24",
-  "completed_trading_days": 217,
-  "rows_written": 801252,
+  "last_completed_date": "2026-11-25",
+  "last_attempted_date": "2026-11-25",
+  "completed_trading_days": 218,
+  "rows_written": 805365,
   "status": "complete",
-  "updated_at": "2026-11-24T23:15:24Z"
+  "updated_at": "2026-11-25T22:44:38Z"
 }
